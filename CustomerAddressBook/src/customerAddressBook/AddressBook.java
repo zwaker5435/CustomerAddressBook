@@ -8,6 +8,7 @@ public class AddressBook {
 
 	public static void main(String[] args) {
 		Connection conn = null;
+		
 		try{
 			String url="jdbc:sqlite:C:/AddressBook/AddressBook.db";
 			conn = DriverManager.getConnection(url);

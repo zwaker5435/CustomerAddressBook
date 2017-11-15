@@ -2,16 +2,18 @@ package customerAddressBook;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AddressBook {
 
 	public static void main(String[] args) {
 		connect();
-
+		
 	}
 	
-	public static void connect(){
+	public static Connection connect(){
 		Connection conn = null;
 		
 		try{
@@ -22,6 +24,37 @@ public class AddressBook {
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
 		}
+		
+		return conn;
+	}
+	
+	public static void refresh(){
+		row = new Object[3];
+		model.setRowCount(0);
+		
+		String sql = "SELECT ID, fName, lName FROM Student";
+		
+		try{
+			Connection conn = connect();
+			Statement stat = conn.createStatement();
+			ResultSet rs = stat.executeQuery(sql);
+			
+			while(rs.next()){
+				row[0] = rs.getInt("ID");
+				row[1] = rs.getString("fName");
+				row[2] = rs.getString("lName");
+				
+				model.addRow(row);
+			}
+			
+			rs.close();
+			stat.close();
+			conn.close();
+			
+		}catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		
 	}
 
 }

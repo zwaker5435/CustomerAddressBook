@@ -9,9 +9,8 @@ import java.sql.Statement;
 
 import javax.swing.JFrame;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-
-import bitSim.GUI;
 
 public class AddressBook {
 	Object[] row;
@@ -21,9 +20,26 @@ public class AddressBook {
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
 		
+		//creates a table model and sets column headings
 		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
 		model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
+		
+		table.setModel(model);
+		
+		JTextField textCustomerId = new JTextField();
+		JTextField textCustomerName = new JTextField();
+		JTextField textAddressLine1 = new JTextField();
+		JTextField textAddressLine2 = new JTextField();
+		JTextField textAddressLine3 = new JTextField();
+		JTextField textCity = new JTextField();
+		JTextField textProvince = new JTextField();
+		JTextField textCountry = new JTextField();
+		JTextField textPostalCode = new JTextField();
+		JTextField textPhoneNumber = new JTextField();
+		JTextField textFaxNumber = new JTextField();
+		JTextField textEmailAddress = new JTextField();
+		
 		
 	}
 	

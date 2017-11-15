@@ -47,7 +47,6 @@ public class AddressBook {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
 			}
-			
 		}
 		
 		

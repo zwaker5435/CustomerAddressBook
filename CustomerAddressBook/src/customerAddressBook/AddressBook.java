@@ -5,13 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class AddressBook {
-	
-	public AddressBook(){
-		
-	}
 
 	public static void main(String[] args) {
-		
+		connect();
 
 	}
 	

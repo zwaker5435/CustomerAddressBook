@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -41,6 +42,10 @@ public class AddressBook {
 		JTextField textFaxNumber = new JTextField();
 		JTextField textEmailAddress = new JTextField();
 		
+		JButton btnAdd = new JButton();
+		JButton btnDelete = new JButton();
+		JButton btnEdit = new JButton();
+		JButton btnSearch = new JButton();
 		
 		// btnAdd, del edit, search
 		btnAdd.addActionListener(new ActionListener() {

@@ -26,6 +26,7 @@ public class AddressBook {
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
 		}
+		
 	}
 
 }

@@ -6,10 +6,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class AddressBook {
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
-	public static void main(String[] args) {
-		connect();
+public class AddressBook {
+	Object[] row;
+	DefaultTableModel model;
+
+	public AddressBook(){
+		JFrame frame = new JFrame();
+		JTable table = new JTable();
+		
+		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "", "", "", "", "", "", "", "", "", };
 		
 	}
 	

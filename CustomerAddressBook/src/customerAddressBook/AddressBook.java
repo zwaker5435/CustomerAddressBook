@@ -1,5 +1,6 @@
 package customerAddressBook;
 
+import java.awt.event.ActionListener;
 import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -39,6 +40,15 @@ public class AddressBook {
 		JTextField textPhoneNumber = new JTextField();
 		JTextField textFaxNumber = new JTextField();
 		JTextField textEmailAddress = new JTextField();
+		
+		
+		// btnAdd, del edit, search
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
+		}
 		
 		
 	}

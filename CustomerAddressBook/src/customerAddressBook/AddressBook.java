@@ -47,6 +47,13 @@ public class AddressBook {
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
 		
+		
+		
+		//get nicks sqlite connection in the C drive
+		
+		
+		
+		
 		// btnAdd, del edit, search
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

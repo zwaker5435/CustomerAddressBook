@@ -1,5 +1,6 @@
 package customerAddressBook;
 
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -19,6 +20,15 @@ public class AddressBook {
 		JTable table = new JTable();
 		
 		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "", "", "", "", "", "", "", "", "", };
+		
+		// btnAdd, del edit, search
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
+		}
+		
 		
 	}
 	

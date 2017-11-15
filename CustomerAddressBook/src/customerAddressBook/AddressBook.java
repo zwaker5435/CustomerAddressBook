@@ -5,8 +5,17 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class AddressBook {
+	
+	public AddressBook(){
+		
+	}
 
 	public static void main(String[] args) {
+		
+
+	}
+	
+	public static void connect(){
 		Connection conn = null;
 		
 		try{
@@ -17,7 +26,6 @@ public class AddressBook {
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
 		}
-
 	}
 
 }

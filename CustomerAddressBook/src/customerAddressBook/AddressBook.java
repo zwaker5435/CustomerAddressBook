@@ -1,10 +1,7 @@
 package customerAddressBook;
 
-<<<<<<< HEAD
 import java.awt.event.ActionListener;
-=======
 import java.awt.EventQueue;
->>>>>>> branch 'master' of https://github.com/zwaker5435/CustomerAddressBook
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,8 +11,6 @@ import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
-import bitSim.GUI;
 
 public class AddressBook {
 	Object[] row;

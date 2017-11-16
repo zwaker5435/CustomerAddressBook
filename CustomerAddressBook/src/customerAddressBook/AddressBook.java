@@ -1,6 +1,8 @@
 package customerAddressBook;
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -67,7 +69,25 @@ public class AddressBook {
 		
 		
 		
-
+		table.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e) {
+				int i = table.getSelectedRow();
+				
+				textCustomerId.setText(model.getValueAt(i, 0).toString());	
+				textCustomerName.setText(model.getValueAt(i, 1).toString());
+				textAddressLine1.setText(model.getValueAt(i, 2).toString());
+				textAddressLine2.setText(model.getValueAt(i, 3).toString());
+				textAddressLine3.setText(model.getValueAt(i, 4).toString());
+				textCity.setText(model.getValueAt(i, 5).toString());
+				textProvince.setText(model.getValueAt(i, 6).toString());
+				textCountry.setText(model.getValueAt(i, 7).toString());
+				textPostalCode.setText(model.getValueAt(i, 8).toString());
+				textPhoneNumber.setText(model.getValueAt(i, 9).toString());
+				textFaxNumber.setText(model.getValueAt(i, 10).toString());
+				textEmailAddress.setText(model.getValueAt(i, 11).toString());
+			}
+		});
+		
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

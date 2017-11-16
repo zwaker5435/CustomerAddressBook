@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -76,11 +77,51 @@ public class AddressBook {
 		
 		
 		
-		// btnAdd, del edit, search
+		// btnAdd, delete, edit, search
 		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				
+				try {
+					Connection conn = connect();
+					PreparedStatement pst = conn.prepareStatement(sql);
+					
+					pst.setString(1, CustomerName.getText());
+					pst.setString(2, AddressLine1.getText());
+					
+					pst.executeUpdate();
+					
+					pst.close();
+					conn.close();
+					
+				} catch(SQLException ex) {
+					System.out.println(ex.getMessage());
+				}
+				
+				refresh();
+			}
+			
+		}
+		
+		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
 			}
+			
+		}
+		
+		btnEdit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
+		}
+		
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
 		}
 		
 		

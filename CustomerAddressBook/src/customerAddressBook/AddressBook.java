@@ -11,6 +11,7 @@ import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -48,25 +49,26 @@ public class AddressBook {
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
 		
-		textCustomerId.setBounds(20, 20, 50, 25);
-		textCustomerName.setBounds(20, 80, 50, 25);
-		textAddressLine1.setBounds(20, 140, 50, 25);
-		textAddressLine2.setBounds(20, 200, 50, 25);
-		textAddressLine3.setBounds(20, 260, 50, 25);
-		textCity.setBounds(20, 320, 50, 25);
-		textProvince.setBounds(20, 380, 50, 25);
-		textCountry.setBounds(20, 440, 50, 25);
-		textPostalCode.setBounds(20, 500, 50, 25);
-		textPhoneNumber.setBounds(20, 560, 50, 25);
-		textFaxNumber.setBounds(20, 620, 50, 25);
-		textEmailAddress.setBounds(20, 680, 50, 25);
+		textCustomerId.setBounds(20, 20, 60, 25);
+		textCustomerName.setBounds(20, 80, 60, 25);
+		textAddressLine1.setBounds(20, 140, 60, 25);
+		textAddressLine2.setBounds(20, 200, 60, 25);
+		textAddressLine3.setBounds(20, 260, 60, 25);
+		textCity.setBounds(20, 320, 60, 25);
+		textProvince.setBounds(20, 380, 60, 25);
+		textCountry.setBounds(20, 440, 60, 25);
+		textPostalCode.setBounds(20, 500, 60, 25);
+		textPhoneNumber.setBounds(20, 560, 60, 25);
+		textFaxNumber.setBounds(20, 620, 60, 25);
+		textEmailAddress.setBounds(20, 680, 60, 25);
 		
-		btnAdd.setBounds(40, , width, height);
-		btnDelete.setBounds(40, , width, height);
-		btnEdit.setBounds(40, , width, height);
-		btnSearch.setBounds(40, , width, height);
+		btnAdd.setBounds(40, 20, 50, 25);
+		btnDelete.setBounds(40, 70, 50, 25);
+		btnEdit.setBounds(40, 120, 50, 25);
+		btnSearch.setBounds(40, 190, 50, 25);
 		
-		
+		JScrollPane pane = new JScrollPane(table);
+		pane.setBounds(8, 8, 880, 200);
 		
 		frame.setLayout(null);
 		

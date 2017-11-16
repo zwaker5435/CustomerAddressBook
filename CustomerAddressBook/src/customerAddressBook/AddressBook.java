@@ -33,6 +33,21 @@ public class AddressBook {
 		model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
+		
+		//fix error on line below
+		table.getColumnModel().getColumn(0).setMinWidth(30);
+		table.getColumnModel().getColumn(1).setMinWidth(30);
+		table.getColumnModel().getColumn(2).setMinWidth(30);
+		table.getColumnModel().getColumn(3).setMinWidth(30);
+		table.getColumnModel().getColumn(4).setMinWidth(30);
+		table.getColumnModel().getColumn(5).setMinWidth(30);
+		table.getColumnModel().getColumn(6).setMinWidth(30);
+		table.getColumnModel().getColumn(7).setMinWidth(30);
+		table.getColumnModel().getColumn(8).setMinWidth(30);
+		table.getColumnModel().getColumn(9).setMinWidth(30);
+		table.getColumnModel().getColumn(10).setMinWidth(30);
+		table.getColumnModel().getColumn(11).setMinWidth(30);
+		
 		table.setModel(model);
 		
 		JTextField textCustomerId = new JTextField();

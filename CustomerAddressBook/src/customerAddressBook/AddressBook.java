@@ -61,9 +61,34 @@ public class AddressBook {
 		textFaxNumber.setBounds(20, 620, 50, 25);
 		textEmailAddress.setBounds(20, 680, 50, 25);
 		
+		btnAdd.setBounds(40, , width, height);
+		btnDelete.setBounds(40, , width, height);
+		btnEdit.setBounds(40, , width, height);
+		btnSearch.setBounds(40, , width, height);
 		
 		
 		
+		frame.setLayout(null);
+		
+		frame.add(pane);
+		
+		frame.add(textCustomerId);
+		frame.add(textCustomerName);
+		frame.add(textAddressLine1);
+		frame.add(textAddressLine2);
+		frame.add(textAddressLine3);
+		frame.add(textCity);
+		frame.add(textProvince);
+		frame.add(textCountry);
+		frame.add(textPostalCode);
+		frame.add(textPhoneNumber);
+		frame.add(textFaxNumber);
+		frame.add(textEmailAddress);
+		
+		frame.add(btnAdd);
+		frame.add(btnDelete);
+		frame.add(btnEdit);
+		frame.add(btnSearch);
 		
 		
 		// btnAdd, delete, edit, search

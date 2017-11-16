@@ -33,22 +33,23 @@ public class AddressBook {
 		model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
+		table.setModel(model);
 		
 		//fix error on line below
-		table.getColumnModel().getColumn(0).setMinWidth(30);
-		table.getColumnModel().getColumn(1).setMinWidth(30);
-		table.getColumnModel().getColumn(2).setMinWidth(30);
-		table.getColumnModel().getColumn(3).setMinWidth(30);
-		table.getColumnModel().getColumn(4).setMinWidth(30);
-		table.getColumnModel().getColumn(5).setMinWidth(30);
-		table.getColumnModel().getColumn(6).setMinWidth(30);
-		table.getColumnModel().getColumn(7).setMinWidth(30);
-		table.getColumnModel().getColumn(8).setMinWidth(30);
-		table.getColumnModel().getColumn(9).setMinWidth(30);
-		table.getColumnModel().getColumn(10).setMinWidth(30);
-		table.getColumnModel().getColumn(11).setMinWidth(30);
+		table.getColumnModel().getColumn(0).setMinWidth(100);
+		table.getColumnModel().getColumn(1).setMinWidth(100);
+		table.getColumnModel().getColumn(2).setMinWidth(100);
+		table.getColumnModel().getColumn(3).setMinWidth(100);
+		table.getColumnModel().getColumn(4).setMinWidth(100);
+		table.getColumnModel().getColumn(5).setMinWidth(100);
+		table.getColumnModel().getColumn(6).setMinWidth(100);
+		table.getColumnModel().getColumn(7).setMinWidth(100);
+		table.getColumnModel().getColumn(8).setMinWidth(100);
+		table.getColumnModel().getColumn(9).setMinWidth(100);
+		table.getColumnModel().getColumn(10).setMinWidth(100);
+		table.getColumnModel().getColumn(11).setMinWidth(100);
 		
-		table.setModel(model);
+		
 		
 		JTextField textCustomerId = new JTextField();
 		JTextField textCustomerName = new JTextField();
@@ -68,23 +69,23 @@ public class AddressBook {
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
 		
-		textCustomerId.setBounds(20, 20, 60, 25);
-		textCustomerName.setBounds(20, 80, 60, 25);
-		textAddressLine1.setBounds(20, 140, 60, 25);
-		textAddressLine2.setBounds(20, 200, 60, 25);
-		textAddressLine3.setBounds(20, 260, 60, 25);
-		textCity.setBounds(20, 320, 60, 25);
-		textProvince.setBounds(20, 380, 60, 25);
-		textCountry.setBounds(20, 440, 60, 25);
-		textPostalCode.setBounds(20, 500, 60, 25);
-		textPhoneNumber.setBounds(20, 560, 60, 25);
-		textFaxNumber.setBounds(20, 620, 60, 25);
-		textEmailAddress.setBounds(20, 680, 60, 25);
+		textCustomerId.setBounds(1000, 20, 60, 25);
+		textCustomerName.setBounds(1000, 80, 60, 25);
+		textAddressLine1.setBounds(1000, 140, 60, 25);
+		textAddressLine2.setBounds(1000, 200, 60, 25);
+		textAddressLine3.setBounds(1000, 260, 60, 25);
+		textCity.setBounds(1000, 320, 60, 25);
+		textProvince.setBounds(1000, 380, 60, 25);
+		textCountry.setBounds(1000, 440, 60, 25);
+		textPostalCode.setBounds(1000, 500, 60, 25);
+		textPhoneNumber.setBounds(1000, 560, 60, 25);
+		textFaxNumber.setBounds(1000, 620, 60, 25);
+		textEmailAddress.setBounds(1000, 680, 60, 25);
 		
-		btnAdd.setBounds(40, 20, 50, 25);
-		btnDelete.setBounds(40, 70, 50, 25);
-		btnEdit.setBounds(40, 120, 50, 25);
-		btnSearch.setBounds(40, 190, 50, 25);
+		btnAdd.setBounds(1100, 20, 50, 25);
+		btnDelete.setBounds(1100, 70, 50, 25);
+		btnEdit.setBounds(1100, 120, 50, 25);
+		btnSearch.setBounds(1100, 170, 50, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 880, 200);

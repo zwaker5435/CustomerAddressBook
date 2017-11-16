@@ -100,7 +100,7 @@ public class AddressBook {
 				refresh();
 			}
 			
-		}
+		});
 		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,7 +124,7 @@ public class AddressBook {
 				refresh();
 			}
 			
-		}
+		});
 		
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -159,14 +159,14 @@ public class AddressBook {
 				refresh();
 			}
 			
-		}
+		});
 		
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
 			}
 			
-		}
+		});
 		
 		
 	}

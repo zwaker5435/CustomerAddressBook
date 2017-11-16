@@ -75,8 +75,17 @@ public class AddressBook {
 					Connection conn = connect();
 					PreparedStatement pst = conn.prepareStatement(sql);
 					
-					pst.setString(1, CustomerName.getText());
-					pst.setString(2, AddressLine1.getText());
+					pst.setString(1, textCustomerName.getText());
+					pst.setString(2, textAddressLine1.getText());
+					pst.setString(2, textAddressLine2.getText());
+					pst.setString(2, textAddressLine3.getText());
+					pst.setString(2, textCity.getText());
+					pst.setString(2, textProvince.getText());
+					pst.setString(2, textCountry.getText());
+					pst.setString(2, textPostalCode.getText());
+					pst.setString(2, textPhoneNumber.getText());
+					pst.setString(2, textFaxNumber.getText());
+					pst.setString(2, textEmailAddress.getText());
 					
 					pst.executeUpdate();
 					
@@ -94,14 +103,59 @@ public class AddressBook {
 		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+				String sql = "DELETE FROM student WHERE ID = ?";
+				
+				try {
+					Connection conn = connect();
+					PreparedStatement pst = conn.prepareStatement(sql);
+					
+					pst.setInt(1, Integer.parseInt(textCustomerId.getText()));
+					
+					pst.executeUpdate();
+					
+					pst.close();
+					conn.close();
+					
+				} catch(SQLException ex) {
+					System.out.println(ex.getMessage());
+				}
+				
+				refresh();
 			}
 			
 		}
 		
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+				String sql = "UPDATE student SET fName = ?, lName = ? WHERE ID = ?";
+				try {
+					Connection conn = connect();
+					PreparedStatement pst = conn.prepareStatement(sql);
+					
+					pst.setString(1, (textCustomerName.getText()));
+					pst.setString(2, (textAddressLine1.getText()));
+					pst.setString(3, (textAddressLine2.getText()));
+					pst.setString(4, (textAddressLine3.getText()));
+					pst.setString(5, (textCity.getText()));
+					pst.setString(6, (textProvince.getText()));
+					pst.setString(7, (textCountry.getText()));
+					pst.setString(8, (textPostalCode.getText()));
+					pst.setString(9, (textPhoneNumber.getText()));
+					pst.setString(10, (textFaxNumber.getText()));
+					pst.setString(11, (textEmailAddress.getText()));
+					
+					pst.setInt(3, Integer.parseInt(textCustomerId.getText()));
+					
+					pst.executeUpdate();
+					
+					pst.close();
+					conn.close();
+					
+				} catch(SQLException ex) {
+					System.out.println(ex.getMessage());
+				}
+				
+				refresh();
 			}
 			
 		}

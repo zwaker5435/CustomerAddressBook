@@ -60,7 +60,18 @@ public class AddressBook {
 		textFaxNumber.setBounds(20, 620, 50, 25);
 		textEmailAddress.setBounds(20, 680, 50, 25);
 		
-		
+		btnCustomerId.setBounds(20, 20, 50, 25);
+		btnCustomerName.setBounds(20, 80, 50, 25);
+		btnAddressLine1.setBounds(20, 140, 50, 25);
+		btnAddressLine2.setBounds(20, 200, 50, 25);
+		btnAddressLine3.setBounds(20, 260, 50, 25);
+		btnCity.setBounds(20, 320, 50, 25);
+		btnProvince.setBounds(20, 380, 50, 25);
+		btnCountry.setBounds(20, 440, 50, 25);
+		btnPostalCode.setBounds(20, 500, 50, 25);
+		btnPhoneNumber.setBounds(20, 560, 50, 25);
+		btnFaxNumber.setBounds(20, 620, 50, 25);
+		btnEmailAddress.setBounds(20, 680, 50, 25);
 		
 		
 		

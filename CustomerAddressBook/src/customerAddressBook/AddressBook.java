@@ -19,8 +19,8 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 public class AddressBook {
-	Object[] row;
-	DefaultTableModel model;
+	static Object[] row;
+	static DefaultTableModel model;
 
 	
 	public AddressBook(){

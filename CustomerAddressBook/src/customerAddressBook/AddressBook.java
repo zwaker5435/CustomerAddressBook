@@ -1,5 +1,6 @@
 package customerAddressBook;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -116,7 +117,6 @@ public class AddressBook {
 		});
 		
 		btnAdd.addActionListener(new ActionListener() {
-			
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 				

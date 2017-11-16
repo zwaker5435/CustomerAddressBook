@@ -53,17 +53,17 @@ public class AddressBook {
 		JButton btnSearch = new JButton();
 		
 		textCustomerId.setBounds(20, 20, 60, 25);
-		textCustomerName.setBounds(20, 80, 70, 25);
-		textAddressLine1.setBounds(20, 150, 60, 25);
-		textAddressLine2.setBounds(20, 210, 60, 25);
-		textAddressLine3.setBounds(20, 270, 60, 25);
-		textCity.setBounds(20, 330, 60, 25);
-		textProvince.setBounds(20, 390, 60, 25);
-		textCountry.setBounds(20, 450, 60, 25);
-		textPostalCode.setBounds(20, 510, 60, 25);
-		textPhoneNumber.setBounds(20, 570, 60, 25);
-		textFaxNumber.setBounds(20, 630, 60, 25);
-		textEmailAddress.setBounds(20, 690, 60, 25);
+		textCustomerName.setBounds(20, 80, 60, 25);
+		textAddressLine1.setBounds(20, 140, 60, 25);
+		textAddressLine2.setBounds(20, 200, 60, 25);
+		textAddressLine3.setBounds(20, 260, 60, 25);
+		textCity.setBounds(20, 320, 60, 25);
+		textProvince.setBounds(20, 380, 60, 25);
+		textCountry.setBounds(20, 440, 60, 25);
+		textPostalCode.setBounds(20, 500, 60, 25);
+		textPhoneNumber.setBounds(20, 560, 60, 25);
+		textFaxNumber.setBounds(20, 620, 60, 25);
+		textEmailAddress.setBounds(20, 680, 60, 25);
 		
 		btnAdd.setBounds(40, 20, 50, 25);
 		btnDelete.setBounds(40, 70, 50, 25);

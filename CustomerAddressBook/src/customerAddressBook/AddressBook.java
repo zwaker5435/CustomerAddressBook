@@ -42,11 +42,33 @@ public class AddressBook {
 		JTextField textEmailAddress = new JTextField();
 		
 		
-		// btnAdd, del edit, search
+		// btnAdd, delete, edit, search
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
 			}
+			
+		}
+		
+		btnDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
+		}
+		
+		btnEdit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
+		}
+		
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+			}
+			
 		}
 		
 		

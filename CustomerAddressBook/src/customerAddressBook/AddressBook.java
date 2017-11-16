@@ -47,9 +47,20 @@ public class AddressBook {
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
 		
+		textCustomerId.setBounds(20, 20, 50, 25);
+		textCustomerName.setBounds(20, 80, 50, 25);
+		textAddressLine1.setBounds(20, 140, 50, 25);
+		textAddressLine2.setBounds(20, 200, 50, 25);
+		textAddressLine3.setBounds(20, 260, 50, 25);
+		textCity.setBounds(20, 320, 50, 25);
+		textProvince.setBounds(20, 380, 50, 25);
+		textCountry.setBounds(20, 440, 50, 25);
+		textPostalCode.setBounds(20, 500, 50, 25);
+		textPhoneNumber.setBounds(20, 560, 50, 25);
+		textFaxNumber.setBounds(20, 620, 50, 25);
+		textEmailAddress.setBounds(20, 680, 50, 25);
 		
 		
-		//get nicks sqlite connection in the C drive
 		
 		
 		
@@ -109,8 +120,6 @@ public class AddressBook {
 	}
 
 }
-
-
 
 
 

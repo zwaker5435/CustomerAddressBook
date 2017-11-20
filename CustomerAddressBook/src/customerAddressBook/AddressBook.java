@@ -105,12 +105,12 @@ public class AddressBook {
 		EmailAddress.setText("EmailAddress");
 		
 		//set text fields
-		textCustomerId.setBounds(990, 20, 100, 25);
-		textCustomerName.setBounds(990, 80, 100, 25);
-		textAddressLine1.setBounds(990, 140, 100, 25);
-		textAddressLine2.setBounds(990, 200, 100, 25);
-		textAddressLine3.setBounds(990, 260, 100, 25);
-		textCity.setBounds(990, 320, 100, 25);
+		textCustomerId.setBounds(20, 850, 100, 25);
+		textCustomerName.setBounds(990, 850, 100, 25);
+		textAddressLine1.setBounds(990, 850, 100, 25);
+		textAddressLine2.setBounds(990, 850, 100, 25);
+		textAddressLine3.setBounds(990, 850, 100, 25);
+		textCity.setBounds(990, 850, 100, 25);
 		textProvince.setBounds(990, 380, 100, 25);
 		textCountry.setBounds(990, 440, 100, 25);
 		textPostalCode.setBounds(990, 500, 100, 25);
@@ -138,7 +138,7 @@ public class AddressBook {
 		btnSearch.setBounds(1100, 170, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
-		pane.setBounds(8, 8, 1200, 200);
+		pane.setBounds(8, 8, 1200, 400);
 		
 		frame.setLayout(null);
 		

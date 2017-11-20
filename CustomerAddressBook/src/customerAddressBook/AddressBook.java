@@ -13,6 +13,7 @@ import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -64,22 +65,22 @@ public class AddressBook {
 		JTextField textEmailAddress = new JTextField();
 		
 		//search fields
-		JTextField textIdSearch = new JTextField();
+		JLabel textIdSearch = new JLabel();
 		JTextField IdSearch = new JTextField();
 		
 		//text field labels
-		JTextField CustomerId = new JTextField();
-		JTextField CustomerName = new JTextField();
-		JTextField AddressLine1 = new JTextField();
-		JTextField AddressLine2 = new JTextField();
-		JTextField AddressLine3 = new JTextField();
-		JTextField City = new JTextField();
-		JTextField Province = new JTextField();
-		JTextField Country = new JTextField();
-		JTextField PostalCode = new JTextField();
-		JTextField PhoneNumber = new JTextField();
-		JTextField FaxNumber = new JTextField();
-		JTextField EmailAddress = new JTextField();
+		JLabel CustomerId = new JLabel();
+		JLabel CustomerName = new JLabel();
+		JLabel AddressLine1 = new JLabel();
+		JLabel AddressLine2 = new JLabel();
+		JLabel AddressLine3 = new JLabel();
+		JLabel City = new JLabel();
+		JLabel Province = new JLabel();
+		JLabel Country = new JLabel();
+		JLabel PostalCode = new JLabel();
+		JLabel PhoneNumber = new JLabel();
+		JLabel FaxNumber = new JLabel();
+		JLabel EmailAddress = new JLabel();
 		
 		//buttons
 		JButton btnAdd = new JButton();

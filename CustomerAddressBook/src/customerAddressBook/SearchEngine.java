@@ -30,7 +30,7 @@ public class SearchEngine extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel idLabel = new JLabel("ID: ");
-		idLabel.setBounds(12, 35, 21, 16);
+		idLabel.setBounds(181, 35, 21, 16);
 		contentPane.add(idLabel);
 		
 		JButton btnNewButton = new JButton("New button");
@@ -38,7 +38,7 @@ public class SearchEngine extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		textField = new JTextField();
-		textField.setBounds(32, 32, 34, 22);
+		textField.setBounds(0, 45, 34, 22);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		

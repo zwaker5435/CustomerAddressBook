@@ -28,6 +28,7 @@ public class AddressBook {
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
 		
+		
 		//creates a table model and sets column headings
 		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
 		model = new DefaultTableModel();
@@ -35,7 +36,7 @@ public class AddressBook {
 		
 		table.setModel(model);
 		
-		//fix error on line below
+		//set column titles
 		table.getColumnModel().getColumn(0).setMinWidth(100);
 		table.getColumnModel().getColumn(1).setMinWidth(100);
 		table.getColumnModel().getColumn(2).setMinWidth(100);
@@ -49,8 +50,7 @@ public class AddressBook {
 		table.getColumnModel().getColumn(10).setMinWidth(100);
 		table.getColumnModel().getColumn(11).setMinWidth(100);
 		
-		
-		
+		//text fields
 		JTextField textCustomerId = new JTextField();
 		JTextField textCustomerName = new JTextField();
 		JTextField textAddressLine1 = new JTextField();
@@ -64,28 +64,78 @@ public class AddressBook {
 		JTextField textFaxNumber = new JTextField();
 		JTextField textEmailAddress = new JTextField();
 		
+		//text field labels
+		JTextField CustomerId = new JTextField();
+		JTextField CustomerName = new JTextField();
+		JTextField AddressLine1 = new JTextField();
+		JTextField AddressLine2 = new JTextField();
+		JTextField AddressLine3 = new JTextField();
+		JTextField City = new JTextField();
+		JTextField Province = new JTextField();
+		JTextField Country = new JTextField();
+		JTextField PostalCode = new JTextField();
+		JTextField PhoneNumber = new JTextField();
+		JTextField FaxNumber = new JTextField();
+		JTextField EmailAddress = new JTextField();
+		
+		//buttons
 		JButton btnAdd = new JButton();
 		JButton btnDelete = new JButton();
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
 		
-		textCustomerId.setBounds(1000, 20, 60, 25);
-		textCustomerName.setBounds(1000, 80, 60, 25);
-		textAddressLine1.setBounds(1000, 140, 60, 25);
-		textAddressLine2.setBounds(1000, 200, 60, 25);
-		textAddressLine3.setBounds(1000, 260, 60, 25);
-		textCity.setBounds(1000, 320, 60, 25);
-		textProvince.setBounds(1000, 380, 60, 25);
-		textCountry.setBounds(1000, 440, 60, 25);
-		textPostalCode.setBounds(1000, 500, 60, 25);
-		textPhoneNumber.setBounds(1000, 560, 60, 25);
-		textFaxNumber.setBounds(1000, 620, 60, 25);
-		textEmailAddress.setBounds(1000, 680, 60, 25);
+		//name buttons
+		btnAdd.setText("Add");
+		btnDelete.setText("Delete");
+		btnEdit.setText("Edit");
+		btnSearch.setText("Search");
 		
-		btnAdd.setBounds(1100, 20, 50, 25);
-		btnDelete.setBounds(1100, 70, 50, 25);
-		btnEdit.setBounds(1100, 120, 50, 25);
-		btnSearch.setBounds(1100, 170, 50, 25);
+		//name text field labels
+		CustomerId.setText("CustomerId");
+		CustomerName.setText("CustomerName");
+		AddressLine1.setText("AddressLine1");
+		AddressLine2.setText("AddressLine2");
+		AddressLine3.setText("AddressLine3");
+		City.setText("City");
+		Province.setText("Province");
+		Country.setText("Country");
+		PostalCode.setText("PostalCode");
+		PhoneNumber.setText("PhoneNumber");
+		FaxNumber.setText("FaxNumber");
+		EmailAddress.setText("EmailAddress");
+		
+		//set text fields
+		textCustomerId.setBounds(990, 20, 100, 25);
+		textCustomerName.setBounds(990, 80, 100, 25);
+		textAddressLine1.setBounds(990, 140, 100, 25);
+		textAddressLine2.setBounds(990, 200, 100, 25);
+		textAddressLine3.setBounds(990, 260, 100, 25);
+		textCity.setBounds(990, 320, 100, 25);
+		textProvince.setBounds(990, 380, 100, 25);
+		textCountry.setBounds(990, 440, 100, 25);
+		textPostalCode.setBounds(990, 500, 100, 25);
+		textPhoneNumber.setBounds(990, 560, 100, 25);
+		textFaxNumber.setBounds(990, 620, 100, 25);
+		textEmailAddress.setBounds(990, 680, 100, 25);
+		
+		//set text field labels
+		CustomerId.setBounds(890, 20, 100, 25);
+		CustomerName.setBounds(890, 80, 100, 25);
+		AddressLine1.setBounds(890, 140, 100, 25);
+		AddressLine2.setBounds(890, 200, 100, 25);
+		AddressLine3.setBounds(890, 260, 100, 25);
+		City.setBounds(890, 320, 100, 25);
+		Province.setBounds(890, 380, 100, 25);
+		Country.setBounds(890, 440, 100, 25);
+		PostalCode.setBounds(890, 500, 100, 25);
+		PhoneNumber.setBounds(890, 560, 100, 25);
+		FaxNumber.setBounds(890, 620, 100, 25);
+		EmailAddress.setBounds(890, 680, 100, 25);
+		
+		btnAdd.setBounds(1100, 20, 75, 25);
+		btnDelete.setBounds(1100, 70, 75, 25);
+		btnEdit.setBounds(1100, 120, 75, 25);
+		btnSearch.setBounds(1100, 170, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 880, 200);

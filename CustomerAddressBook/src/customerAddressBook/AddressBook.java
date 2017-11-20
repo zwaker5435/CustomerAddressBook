@@ -133,9 +133,9 @@ public class AddressBook {
 		
 		//set buttons
 		btnAdd.setBounds(20, 895, 75, 25);
-		btnDelete.setBounds(120, 895, 75, 25);
-		btnEdit.setBounds(240, 895, 75, 25);
-		btnSearch.setBounds(360, 895, 75, 25);
+		btnDelete.setBounds(140, 895, 75, 25);
+		btnEdit.setBounds(260, 895, 75, 25);
+		btnSearch.setBounds(380, 895, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);

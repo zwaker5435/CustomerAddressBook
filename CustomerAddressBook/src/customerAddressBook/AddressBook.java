@@ -63,6 +63,10 @@ public class AddressBook {
 		JTextField textFaxNumber = new JTextField();
 		JTextField textEmailAddress = new JTextField();
 		
+		//search fields
+		JTextField textIdSearch = new JTextField();
+		JTextField IdSearch = new JTextField();
+		
 		//text field labels
 		JTextField CustomerId = new JTextField();
 		JTextField CustomerName = new JTextField();
@@ -103,6 +107,10 @@ public class AddressBook {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
+		//name IdSearch
+		
+		IdSearch.setText("Id:");
+		
 		//set text fields
 		textCustomerId.setBounds(20, 850, 100, 25);
 		textCustomerName.setBounds(140, 850, 100, 25);
@@ -116,6 +124,10 @@ public class AddressBook {
 		textPhoneNumber.setBounds(1100, 850, 100, 25);
 		textFaxNumber.setBounds(1220, 850, 100, 25);
 		textEmailAddress.setBounds(1340, 850, 100, 25);
+		
+		//set search fields
+		textIdSearch.setBounds(530, 895, 75, 25);
+		IdSearch.setBounds(500, 895, 20, 25);
 		
 		//set text field labels
 		CustomerId.setBounds(20, 805, 100, 25);
@@ -169,6 +181,9 @@ public class AddressBook {
 		frame.add(PhoneNumber);
 		frame.add(FaxNumber);
 		frame.add(EmailAddress);
+		
+		frame.add(textIdSearch);
+		frame.add(IdSearch);
 		
 		frame.add(btnAdd);
 		frame.add(btnDelete);

@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -157,6 +156,19 @@ public class AddressBook {
 		frame.add(textPhoneNumber);
 		frame.add(textFaxNumber);
 		frame.add(textEmailAddress);
+		
+		frame.add(CustomerId);
+		frame.add(CustomerName);
+		frame.add(AddressLine1);
+		frame.add(AddressLine2);
+		frame.add(AddressLine3);
+		frame.add(City);
+		frame.add(Province);
+		frame.add(Country);
+		frame.add(PostalCode);
+		frame.add(PhoneNumber);
+		frame.add(FaxNumber);
+		frame.add(EmailAddress);
 		
 		frame.add(btnAdd);
 		frame.add(btnDelete);

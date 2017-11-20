@@ -132,10 +132,10 @@ public class AddressBook {
 		FaxNumber.setBounds(890, 620, 100, 25);
 		EmailAddress.setBounds(890, 680, 100, 25);
 		
-		btnAdd.setBounds(1100, 20, 75, 25);
-		btnDelete.setBounds(1100, 70, 75, 25);
-		btnEdit.setBounds(1100, 120, 75, 25);
-		btnSearch.setBounds(1100, 170, 75, 25);
+		btnAdd.setBounds(895, 20, 75, 25);
+		btnDelete.setBounds(895, 70, 75, 25);
+		btnEdit.setBounds(895, 120, 75, 25);
+		btnSearch.setBounds(895, 170, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);

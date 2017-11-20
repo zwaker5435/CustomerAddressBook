@@ -119,18 +119,18 @@ public class AddressBook {
 		textEmailAddress.setBounds(1340, 850, 100, 25);
 		
 		//set text field labels
-		CustomerId.setBounds(890, 850, 100, 25);
-		CustomerName.setBounds(890, 850, 100, 25);
-		AddressLine1.setBounds(890, 850, 100, 25);
-		AddressLine2.setBounds(890, 850, 100, 25);
-		AddressLine3.setBounds(890, 850, 100, 25);
-		City.setBounds(890, 850, 100, 25);
-		Province.setBounds(890, 850, 100, 25);
-		Country.setBounds(890, 850, 100, 25);
-		PostalCode.setBounds(890, 850, 100, 25);
-		PhoneNumber.setBounds(890, 850, 100, 25);
-		FaxNumber.setBounds(890, 850, 100, 25);
-		EmailAddress.setBounds(890, 850, 100, 25);
+		CustomerId.setBounds(20, 805, 100, 25);
+		CustomerName.setBounds(140, 805, 100, 25);
+		AddressLine1.setBounds(260, 805, 100, 25);
+		AddressLine2.setBounds(380, 805, 100, 25);
+		AddressLine3.setBounds(500, 805, 100, 25);
+		City.setBounds(620, 805, 100, 25);
+		Province.setBounds(740, 805, 100, 25);
+		Country.setBounds(860, 805, 100, 25);
+		PostalCode.setBounds(980, 805, 100, 25);
+		PhoneNumber.setBounds(1100, 805, 100, 25);
+		FaxNumber.setBounds(1220, 805, 100, 25);
+		EmailAddress.setBounds(1340, 805, 100, 25);
 		
 		//set buttons
 		btnAdd.setBounds(20, 895, 75, 25);

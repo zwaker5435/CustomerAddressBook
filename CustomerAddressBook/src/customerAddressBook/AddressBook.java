@@ -65,7 +65,7 @@ public class AddressBook {
 		JTextField textEmailAddress = new JTextField();
 		
 		//search fields
-		JLabel textIdSearch = new JLabel();
+		JTextField textIdSearch = new JTextField();
 		JTextField IdSearch = new JTextField();
 		
 		//text field labels

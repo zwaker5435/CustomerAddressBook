@@ -162,7 +162,6 @@ public class AddressBook {
 		frame.add(btnEdit);
 		frame.add(btnSearch);
 		
-		
 		table.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e) {
 				int i = table.getSelectedRow();

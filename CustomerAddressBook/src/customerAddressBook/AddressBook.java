@@ -138,7 +138,7 @@ public class AddressBook {
 		btnSearch.setBounds(1100, 170, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
-		pane.setBounds(8, 8, 880, 200);
+		pane.setBounds(8, 8, 1200, 200);
 		
 		frame.setLayout(null);
 		

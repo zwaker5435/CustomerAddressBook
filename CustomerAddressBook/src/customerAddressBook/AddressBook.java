@@ -37,18 +37,18 @@ public class AddressBook {
 		table.setModel(model);
 		
 		//set column titles
-		table.getColumnModel().getColumn(0).setMinWidth(100);
-		table.getColumnModel().getColumn(1).setMinWidth(100);
-		table.getColumnModel().getColumn(2).setMinWidth(100);
-		table.getColumnModel().getColumn(3).setMinWidth(100);
-		table.getColumnModel().getColumn(4).setMinWidth(100);
-		table.getColumnModel().getColumn(5).setMinWidth(100);
-		table.getColumnModel().getColumn(6).setMinWidth(100);
-		table.getColumnModel().getColumn(7).setMinWidth(100);
-		table.getColumnModel().getColumn(8).setMinWidth(100);
-		table.getColumnModel().getColumn(9).setMinWidth(100);
-		table.getColumnModel().getColumn(10).setMinWidth(100);
-		table.getColumnModel().getColumn(11).setMinWidth(100);
+		table.getColumnModel().getColumn(0).setMinWidth(120);
+		table.getColumnModel().getColumn(1).setMinWidth(120);
+		table.getColumnModel().getColumn(2).setMinWidth(120);
+		table.getColumnModel().getColumn(3).setMinWidth(120);
+		table.getColumnModel().getColumn(4).setMinWidth(120);
+		table.getColumnModel().getColumn(5).setMinWidth(120);
+		table.getColumnModel().getColumn(6).setMinWidth(120);
+		table.getColumnModel().getColumn(7).setMinWidth(120);
+		table.getColumnModel().getColumn(8).setMinWidth(120);
+		table.getColumnModel().getColumn(9).setMinWidth(120);
+		table.getColumnModel().getColumn(10).setMinWidth(120);
+		table.getColumnModel().getColumn(11).setMinWidth(120);
 		
 		//text fields
 		JTextField textCustomerId = new JTextField();
@@ -106,17 +106,17 @@ public class AddressBook {
 		
 		//set text fields
 		textCustomerId.setBounds(20, 850, 100, 25);
-		textCustomerName.setBounds(990, 850, 100, 25);
-		textAddressLine1.setBounds(990, 850, 100, 25);
-		textAddressLine2.setBounds(990, 850, 100, 25);
-		textAddressLine3.setBounds(990, 850, 100, 25);
-		textCity.setBounds(990, 850, 100, 25);
-		textProvince.setBounds(990, 380, 100, 25);
-		textCountry.setBounds(990, 440, 100, 25);
-		textPostalCode.setBounds(990, 500, 100, 25);
-		textPhoneNumber.setBounds(990, 560, 100, 25);
-		textFaxNumber.setBounds(990, 620, 100, 25);
-		textEmailAddress.setBounds(990, 680, 100, 25);
+		textCustomerName.setBounds(140, 850, 100, 25);
+		textAddressLine1.setBounds(260, 850, 100, 25);
+		textAddressLine2.setBounds(380, 850, 100, 25);
+		textAddressLine3.setBounds(500, 850, 100, 25);
+		textCity.setBounds(620, 850, 100, 25);
+		textProvince.setBounds(740, 850, 100, 25);
+		textCountry.setBounds(860, 850, 100, 25);
+		textPostalCode.setBounds(980, 850, 100, 25);
+		textPhoneNumber.setBounds(1100, 850, 100, 25);
+		textFaxNumber.setBounds(1220, 850, 100, 25);
+		textEmailAddress.setBounds(1340, 850, 100, 25);
 		
 		//set text field labels
 		CustomerId.setBounds(890, 850, 100, 25);
@@ -138,7 +138,7 @@ public class AddressBook {
 		btnSearch.setBounds(1100, 850, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
-		pane.setBounds(8, 8, 1200, 400);
+		pane.setBounds(8, 8, 1440, 400);
 		
 		frame.setLayout(null);
 		

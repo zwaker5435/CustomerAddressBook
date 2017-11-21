@@ -289,8 +289,6 @@ public class AddressBook {
 					pst.setString(10, (textFaxNumber.getText()));
 					pst.setString(11, (textEmailAddress.getText()));
 					
-					pst.setInt(3, Integer.parseInt(textCustomerId.getText()));
-					
 					pst.executeUpdate();
 					
 					pst.close();

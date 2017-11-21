@@ -214,7 +214,7 @@ public class AddressBook {
 		
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				String sql = "INSERT INTO CustomerAddressBook (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 				
 				try {
 					Connection conn = connect();
@@ -347,9 +347,17 @@ public class AddressBook {
 			ResultSet rs = stat.executeQuery(sql);
 			
 			while(rs.next()){
-				row[0] = rs.getInt("ID");
-				row[1] = rs.getString("fName");
-				row[2] = rs.getString("lName");
+				row[0] = rs.getInt("CustomerId");
+				row[1] = rs.getString("AddressLine1");
+				row[2] = rs.getString("AddressLine2");
+				row[3] = rs.getString("AddressLine3");
+				row[4] = rs.getString("City");
+				row[5] = rs.getString("Province");
+				row[6] = rs.getString("Country");
+				row[7] = rs.getString("PostalCode");
+				row[8] = rs.getString("PhoneNumber");
+				row[9] = rs.getString("FaxNumber");
+				row[10] = rs.getString("EmailAddress");
 				
 				model.addRow(row);
 			}

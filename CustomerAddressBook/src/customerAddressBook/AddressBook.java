@@ -272,7 +272,7 @@ public class AddressBook {
 		
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "UPDATE CustomerAddressBook SET fName = ?, lName = ? WHERE CustomerId = ?";
+				String sql = "UPDATE CustomerAddressBook SET CustomerName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
 				try {
 					Connection conn = connect();
 					PreparedStatement pst = conn.prepareStatement(sql);
@@ -307,7 +307,7 @@ public class AddressBook {
 		
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1)";
+				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress)";
 				
 			}
 			

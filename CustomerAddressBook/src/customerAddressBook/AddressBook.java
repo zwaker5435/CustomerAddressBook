@@ -336,7 +336,7 @@ public class AddressBook {
 	}
 	
 	private void refresh(){
-		row = new Object[3];
+		row = new Object[11];
 		model.setRowCount(0);
 		
 		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";

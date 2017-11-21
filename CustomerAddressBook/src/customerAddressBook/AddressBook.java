@@ -339,7 +339,7 @@ public class AddressBook {
 		row = new Object[3];
 		model.setRowCount(0);
 		
-		String sql = "SELECT ID, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
+		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
 		
 		try{
 			Connection conn = connect();

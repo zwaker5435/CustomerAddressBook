@@ -336,7 +336,7 @@ public class AddressBook {
 	}
 	
 	private void refresh(){
-		row = new Object[11];
+		row = new Object[12];
 		model.setRowCount(0);
 		
 		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
@@ -348,16 +348,17 @@ public class AddressBook {
 			
 			while(rs.next()){
 				row[0] = rs.getInt("CustomerId");
-				row[1] = rs.getString("AddressLine1");
-				row[2] = rs.getString("AddressLine2");
-				row[3] = rs.getString("AddressLine3");
-				row[4] = rs.getString("City");
-				row[5] = rs.getString("Province");
-				row[6] = rs.getString("Country");
-				row[7] = rs.getString("PostalCode");
-				row[8] = rs.getString("PhoneNumber");
-				row[9] = rs.getString("FaxNumber");
-				row[10] = rs.getString("EmailAddress");
+				row[1] = rs.getString("CustomerName");
+				row[2] = rs.getString("AddressLine1");
+				row[3] = rs.getString("AddressLine2");
+				row[4] = rs.getString("AddressLine3");
+				row[5] = rs.getString("City");
+				row[6] = rs.getString("Province");
+				row[7] = rs.getString("Country");
+				row[8] = rs.getString("PostalCode");
+				row[9] = rs.getString("PhoneNumber");
+				row[10] = rs.getString("FaxNumber");
+				row[11] = rs.getString("EmailAddress");
 				
 				model.addRow(row);
 			}

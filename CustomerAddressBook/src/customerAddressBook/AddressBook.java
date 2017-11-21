@@ -222,15 +222,15 @@ public class AddressBook {
 					
 					pst.setString(1, textCustomerName.getText());
 					pst.setString(2, textAddressLine1.getText());
-					pst.setString(2, textAddressLine2.getText());
-					pst.setString(2, textAddressLine3.getText());
-					pst.setString(2, textCity.getText());
-					pst.setString(2, textProvince.getText());
-					pst.setString(2, textCountry.getText());
-					pst.setString(2, textPostalCode.getText());
-					pst.setString(2, textPhoneNumber.getText());
-					pst.setString(2, textFaxNumber.getText());
-					pst.setString(2, textEmailAddress.getText());
+					pst.setString(3, textAddressLine2.getText());
+					pst.setString(4, textAddressLine3.getText());
+					pst.setString(5, textCity.getText());
+					pst.setString(6, textProvince.getText());
+					pst.setString(7, textCountry.getText());
+					pst.setString(8, textPostalCode.getText());
+					pst.setString(9, textPhoneNumber.getText());
+					pst.setString(10, textFaxNumber.getText());
+					pst.setString(11, textEmailAddress.getText());
 					
 					pst.executeUpdate();
 					

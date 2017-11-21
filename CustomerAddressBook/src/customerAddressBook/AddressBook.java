@@ -191,6 +191,8 @@ public class AddressBook {
 		frame.add(btnEdit);
 		frame.add(btnSearch);
 		
+		refresh();
+		
 		table.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e) {
 				int i = table.getSelectedRow();
@@ -212,7 +214,7 @@ public class AddressBook {
 		
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 				
 				try {
 					Connection conn = connect();
@@ -246,7 +248,7 @@ public class AddressBook {
 		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "DELETE FROM student WHERE ID = ?";
+				String sql = "DELETE FROM CustomerAddressBook WHERE CustomerId = ?";
 				
 				try {
 					Connection conn = connect();
@@ -270,7 +272,7 @@ public class AddressBook {
 		
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "UPDATE student SET fName = ?, lName = ? WHERE ID = ?";
+				String sql = "UPDATE CustomerAddressBook SET fName = ?, lName = ? WHERE CustomerId = ?";
 				try {
 					Connection conn = connect();
 					PreparedStatement pst = conn.prepareStatement(sql);
@@ -305,7 +307,7 @@ public class AddressBook {
 		
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "INSERT INTO AddressBook  (CustomerName, AddressLine1)";
+				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1)";
 				
 			}
 			
@@ -318,7 +320,7 @@ public class AddressBook {
 		
 	}
 	
-	public static Connection connect(){
+	private Connection connect(){
 		Connection conn = null;
 		
 		try{
@@ -333,11 +335,11 @@ public class AddressBook {
 		return conn;
 	}
 	
-	public static void refresh(){
+	private void refresh(){
 		row = new Object[3];
 		model.setRowCount(0);
 		
-		String sql = "SELECT ID, fName, lName FROM Student";
+		String sql = "SELECT ID, fName, lName FROM CustomerAddressBook";
 		
 		try{
 			Connection conn = connect();

@@ -139,7 +139,6 @@ public class AddressBook {
 		//name IdSearch
 		
 		IdSearch.setText("Id:");
-		
 		//set text fields
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);

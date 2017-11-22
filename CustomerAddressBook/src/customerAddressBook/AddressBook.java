@@ -215,48 +215,60 @@ public class AddressBook {
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO CustomerAddressBook (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-				String name, address1, address2, address3, phone, fax, email;
+				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
 				boolean[] error = new boolean[12]; 
 				
-				email = textEmailAddress.getText();
+				name = textCustomerName.getText();
+				address1 = textAddressLine1.getText();
+				address2 = textAddressLine2.getText();
+				address3 = textAddressLine3.getText();
+				city = textCity.getText();
+				province = textProvince.getText();
+				country = textCountry.getText();
+				postalcode = textPostalCode.getText();
 				phone = textPhoneNumber.getText();
 				phone.replaceAll("(", "");
 				phone.replaceAll(")", "");
 				phone.replaceAll("-", "");
+				fax = textFaxNumber.getText();
+				email = textEmailAddress.getText();
+
+				if(name.length()==10){
+					
+				}
+
+				if(address1.length()==10){
+					
+				}
+
+				if(address2.length()==10){
+					
+				}
+
+				if(address3.length()==10){
+					
+				}
+
+				if(city.length()==10){
+					
+				}
+
+				if(province.length()==10){
+					
+				}
+				if(country.length()==10){
+					
+				}
+
+				if(postalcode.length()==10){
+					
+				}
 				
-
-				if(phone.length()==10){
-					
-				}
-
-				if(phone.length()==10){
-					
-				}
-
-				if(phone.length()==10){
-					
-				}
-
-				if(phone.length()==10){
-					
-				}
-
-				if(phone.length()==10){
-					
-				}
-
-				if(phone.length()==10){
-					
-				}
 				if(phone.length()==10){
 					
 				}
 				
-				if(phone.length()==10){
-					
-				}
-				
-				if(phone.length()==10){
+				if(fax.length()==10 || fax.length()==11){
 					
 				}
 				

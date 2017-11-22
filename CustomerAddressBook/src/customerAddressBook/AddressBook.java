@@ -307,15 +307,15 @@ public class AddressBook {
 					error[4]=true;
 				}
 
-				if(province.length()==10){
+				if(province.length()==20){
 					error[5]=true;
 				}
 				
-				if(country.length()==10){
+				if(country.length()<=36){
 					error[6]=true;
 				}
 
-				if(postalcode.length()==10){
+				if(postalcode.length()<=6){
 					error[7]=true;
 				}
 				

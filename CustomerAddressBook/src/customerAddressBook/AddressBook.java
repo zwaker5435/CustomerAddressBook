@@ -355,6 +355,7 @@ public class AddressBook {
 					EmailAddressError.setText("There is problem.");
 				}
 				
+				//Checks if any are false
 				for(int i=0;i<error.length;i++){
 					if(error[i]=false){
 						error[12]=false;
@@ -519,5 +520,5 @@ public class AddressBook {
 		}
 		
 	}
-
+	
 }

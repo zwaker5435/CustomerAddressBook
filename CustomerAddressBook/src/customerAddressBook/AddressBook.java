@@ -28,7 +28,6 @@ public class AddressBook {
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
 		
-		
 		//creates a table model and sets column headings
 		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
 		model = new DefaultTableModel();

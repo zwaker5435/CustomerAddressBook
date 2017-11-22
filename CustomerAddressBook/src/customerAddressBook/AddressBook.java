@@ -122,6 +122,20 @@ public class AddressBook {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
+		//name text field labels
+		CustomerIdError.setText("There is problem.");
+		CustomerNameError.setText("There is problem.");
+		AddressLine1Error.setText("There is problem.");
+		AddressLine2Error.setText("There is problem.");
+		AddressLine3Error.setText("There is problem.");
+		CityError.setText("There is problem.");
+		ProvinceError.setText("There is problem.");
+		CountryError.setText("There is problem.");
+		PostalCodeError.setText("There is problem.");
+		PhoneNumberError.setText("There is problem.");
+		FaxNumberError.setText("There is problem.");
+		EmailAddressError.setText("There is problem.");
+		
 		//name IdSearch
 		
 		IdSearch.setText("Id:");
@@ -140,7 +154,7 @@ public class AddressBook {
 		textFaxNumber.setBounds(1220, 805, 100, 25);
 		textEmailAddress.setBounds(1340, 805, 100, 25);
 		
-		//set text fields
+		//set text field errors
 		CustomerIdError.setBounds(20, 850, 100, 25);
 		CustomerNameError.setBounds(140, 850, 100, 25);
 		AddressLine1Error.setBounds(260, 850, 100, 25);
@@ -159,18 +173,18 @@ public class AddressBook {
 		IdSearch.setBounds(500, 895, 20, 25);
 		
 		//set text field labels
-		CustomerId.setBounds(20, 805, 100, 25);
-		CustomerName.setBounds(140, 805, 100, 25);
-		AddressLine1.setBounds(260, 805, 100, 25);
-		AddressLine2.setBounds(380, 805, 100, 25);
-		AddressLine3.setBounds(500, 805, 100, 25);
-		City.setBounds(620, 805, 100, 25);
-		Province.setBounds(740, 805, 100, 25);
-		Country.setBounds(860, 805, 100, 25);
-		PostalCode.setBounds(980, 805, 100, 25);
-		PhoneNumber.setBounds(1100, 805, 100, 25);
-		FaxNumber.setBounds(1220, 805, 100, 25);
-		EmailAddress.setBounds(1340, 805, 100, 25);
+		CustomerId.setBounds(20, 755, 100, 25);
+		CustomerName.setBounds(140, 755, 100, 25);
+		AddressLine1.setBounds(260, 755, 100, 25);
+		AddressLine2.setBounds(380, 755, 100, 25);
+		AddressLine3.setBounds(500, 755, 100, 25);
+		City.setBounds(620, 755, 100, 25);
+		Province.setBounds(740, 755, 100, 25);
+		Country.setBounds(860, 755, 100, 25);
+		PostalCode.setBounds(980, 755, 100, 25);
+		PhoneNumber.setBounds(1100, 755, 100, 25);
+		FaxNumber.setBounds(1220, 755, 100, 25);
+		EmailAddress.setBounds(1340, 755, 100, 25);
 		
 		//set buttons
 		btnAdd.setBounds(20, 895, 75, 25);

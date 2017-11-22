@@ -216,7 +216,7 @@ public class AddressBook {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO CustomerAddressBook (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
-				boolean[] error = new boolean[12]; 
+				boolean[] error = new boolean[11]; 
 				
 				name = textCustomerName.getText();
 				address1 = textAddressLine1.getText();
@@ -232,48 +232,49 @@ public class AddressBook {
 				phone.replaceAll("-", "");
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
-
+				
 				if(name.length()==10){
-					
+					error[0]=true;
 				}
 
 				if(address1.length()==10){
-					
+					error[1]=true;
 				}
 
 				if(address2.length()==10){
-					
+					error[2]=true;
 				}
 
 				if(address3.length()==10){
-					
+					error[3]=true;
 				}
 
 				if(city.length()==10){
-					
+					error[4]=true;
 				}
 
 				if(province.length()==10){
-					
+					error[5]=true;
 				}
+				
 				if(country.length()==10){
-					
+					error[6]=true;
 				}
 
 				if(postalcode.length()==10){
-					
+					error[7]=true;
 				}
 				
 				if(phone.length()==10){
-					
+					error[8]=true;
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
-					
+					error[9]=true;
 				}
 				
 				if(email.indexOf('@')==1){
-					error[11]=true;
+					error[10]=true;
 				}
 				
 				try {

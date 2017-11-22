@@ -303,7 +303,7 @@ public class AddressBook {
 					error[3]=true;
 				}
 
-				if(city.length()==10){
+				if(city.length()==30){
 					error[4]=true;
 				}
 

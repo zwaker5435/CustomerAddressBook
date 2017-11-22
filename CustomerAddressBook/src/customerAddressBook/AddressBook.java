@@ -286,23 +286,23 @@ public class AddressBook {
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
 				
-				if(name.length()==10){
+				if(name.length()<=30){
 					error[0]=true;
 				}
 
-				if(address1.length()==10){
+				if(address1.length()<=30){
 					error[1]=true;
 				}
 
-				if(address2.length()==10){
+				if(address2.length()<=30){
 					error[2]=true;
 				}
 
-				if(address3.length()==10){
+				if(address3.length()<=30){
 					error[3]=true;
 				}
 
-				if(city.length()==10){
+				if(city.length()==30){
 					error[4]=true;
 				}
 
@@ -329,6 +329,8 @@ public class AddressBook {
 				if(email.indexOf('@')==1){
 					error[10]=true;
 				}
+				
+				
 				
 				try {
 					Connection conn = connect();

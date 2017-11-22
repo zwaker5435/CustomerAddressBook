@@ -215,33 +215,48 @@ public class AddressBook {
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO CustomerAddressBook (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				String phone, email; 
 				
-				try {
-					Connection conn = connect();
-					PreparedStatement pst = conn.prepareStatement(sql);
+				email = textEmailAddress.getText();
+				phone = textPhoneNumber.getText();
+				phone.replaceAll("(", "");
+				phone.replaceAll(")", "");
+				phone.replaceAll("-", "");
+				
+				if(phone.length()==10){
+					if(email.indexOf('@')==1){
+						try {
+							Connection conn = connect();
+							PreparedStatement pst = conn.prepareStatement(sql);
+							
+							pst.setString(1, textCustomerName.getText());
+							pst.setString(2, textAddressLine1.getText());
+							pst.setString(3, textAddressLine2.getText());
+							pst.setString(4, textAddressLine3.getText());
+							pst.setString(5, textCity.getText());
+							pst.setString(6, textProvince.getText());
+							pst.setString(7, textCountry.getText());
+							pst.setString(8, textPostalCode.getText());
+							pst.setString(9, textPhoneNumber.getText());
+							pst.setString(10, textFaxNumber.getText());
+							pst.setString(11, textEmailAddress.getText());
+							
+							pst.executeUpdate();
+							
+							pst.close();
+							conn.close();
+							
+						} catch(SQLException ex) {
+							System.out.println(ex.getMessage());
+						}
+						
+						refresh();
+					}else{
+						
+					}
+				}else{
 					
-					pst.setString(1, textCustomerName.getText());
-					pst.setString(2, textAddressLine1.getText());
-					pst.setString(3, textAddressLine2.getText());
-					pst.setString(4, textAddressLine3.getText());
-					pst.setString(5, textCity.getText());
-					pst.setString(6, textProvince.getText());
-					pst.setString(7, textCountry.getText());
-					pst.setString(8, textPostalCode.getText());
-					pst.setString(9, textPhoneNumber.getText());
-					pst.setString(10, textFaxNumber.getText());
-					pst.setString(11, textEmailAddress.getText());
-					
-					pst.executeUpdate();
-					
-					pst.close();
-					conn.close();
-					
-				} catch(SQLException ex) {
-					System.out.println(ex.getMessage());
 				}
-				
-				refresh();
 			}
 			
 		});
@@ -289,7 +304,7 @@ public class AddressBook {
 					pst.setString(10, (textFaxNumber.getText()));
 					pst.setString(11, (textEmailAddress.getText()));
 					
-					pst.setInt(3, Integer.parseInt(textCustomerId.getText()));
+					pst.setInt(12, Integer.parseInt(textCustomerId.getText()));
 					
 					pst.executeUpdate();
 					

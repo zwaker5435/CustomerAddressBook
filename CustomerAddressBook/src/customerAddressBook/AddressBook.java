@@ -82,6 +82,20 @@ public class AddressBook {
 		JLabel FaxNumber = new JLabel();
 		JLabel EmailAddress = new JLabel();
 		
+		// Error JLabels
+		JLabel CustomerIdError = new JLabel();
+		JLabel CustomerNameError = new JLabel();
+		JLabel AddressLine1Error = new JLabel();
+		JLabel AddressLine2Error = new JLabel();
+		JLabel AddressLine3Error = new JLabel();
+		JLabel CityError = new JLabel();
+		JLabel ProvinceError = new JLabel();
+		JLabel CountryError = new JLabel();
+		JLabel PostalCodeError = new JLabel();
+		JLabel PhoneNumberError = new JLabel();
+		JLabel FaxNumberError = new JLabel();
+		JLabel EmailAddressError = new JLabel();
+		
 		//buttons
 		JButton btnAdd = new JButton();
 		JButton btnDelete = new JButton();
@@ -113,18 +127,32 @@ public class AddressBook {
 		IdSearch.setText("Id:");
 		
 		//set text fields
-		textCustomerId.setBounds(20, 850, 100, 25);
-		textCustomerName.setBounds(140, 850, 100, 25);
-		textAddressLine1.setBounds(260, 850, 100, 25);
-		textAddressLine2.setBounds(380, 850, 100, 25);
-		textAddressLine3.setBounds(500, 850, 100, 25);
-		textCity.setBounds(620, 850, 100, 25);
-		textProvince.setBounds(740, 850, 100, 25);
-		textCountry.setBounds(860, 850, 100, 25);
-		textPostalCode.setBounds(980, 850, 100, 25);
-		textPhoneNumber.setBounds(1100, 850, 100, 25);
-		textFaxNumber.setBounds(1220, 850, 100, 25);
-		textEmailAddress.setBounds(1340, 850, 100, 25);
+		textCustomerId.setBounds(20, 805, 100, 25);
+		textCustomerName.setBounds(140, 805, 100, 25);
+		textAddressLine1.setBounds(260, 805, 100, 25);
+		textAddressLine2.setBounds(380, 805, 100, 25);
+		textAddressLine3.setBounds(500, 805, 100, 25);
+		textCity.setBounds(620, 805, 100, 25);
+		textProvince.setBounds(740, 805, 100, 25);
+		textCountry.setBounds(860, 805, 100, 25);
+		textPostalCode.setBounds(980, 805, 100, 25);
+		textPhoneNumber.setBounds(1100, 805, 100, 25);
+		textFaxNumber.setBounds(1220, 805, 100, 25);
+		textEmailAddress.setBounds(1340, 805, 100, 25);
+		
+		//set text fields
+		CustomerIdError.setBounds(20, 850, 100, 25);
+		CustomerNameError.setBounds(140, 850, 100, 25);
+		AddressLine1Error.setBounds(260, 850, 100, 25);
+		AddressLine2Error.setBounds(380, 850, 100, 25);
+		AddressLine3Error.setBounds(500, 850, 100, 25);
+		CityError.setBounds(620, 850, 100, 25);
+		ProvinceError.setBounds(740, 850, 100, 25);
+		CountryError.setBounds(860, 850, 100, 25);
+		PostalCodeError.setBounds(980, 850, 100, 25);
+		PhoneNumberError.setBounds(1100, 850, 100, 25);
+		FaxNumberError.setBounds(1220, 850, 100, 25);
+		EmailAddressError.setBounds(1340, 850, 100, 25);
 		
 		//set search fields
 		textIdSearch.setBounds(530, 895, 75, 25);
@@ -182,6 +210,19 @@ public class AddressBook {
 		frame.add(PhoneNumber);
 		frame.add(FaxNumber);
 		frame.add(EmailAddress);
+		
+		frame.add(CustomerIdError);
+		frame.add(CustomerNameError);
+		frame.add(AddressLine1Error);
+		frame.add(AddressLine2Error);
+		frame.add(AddressLine3Error);
+		frame.add(CityError);
+		frame.add(ProvinceError);
+		frame.add(CountryError);
+		frame.add(PostalCodeError);
+		frame.add(PhoneNumberError);
+		frame.add(FaxNumberError);
+		frame.add(EmailAddressError);
 		
 		frame.add(textIdSearch);
 		frame.add(IdSearch);

@@ -15,7 +15,6 @@ import javax.swing.table.DefaultTableModel;
 
 public class SearchEngine extends JFrame {
 
-	//stuff
 	private JPanel contentPane;
 	static DefaultTableModel model;
 	static Object[] row;

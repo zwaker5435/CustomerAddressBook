@@ -308,13 +308,13 @@ public class AddressBook {
 					AddressLine3Error.setText("There is problem.");
 				}
 
-				if(city.length()==30){
+				if(city.length()<=30){
 					error[4]=true;
 				}else{
 					CityError.setText("There is problem.");
 				}
 
-				if(province.length()==20){
+				if(province.length()<=20){
 					error[5]=true;
 				}else{
 					ProvinceError.setText("There is problem.");
@@ -335,13 +335,13 @@ public class AddressBook {
 				if(phone.length()==10){
 					error[8]=true;
 				}else{
-					PhoneNumberError.setText("It must be 10 numbers");
+					PhoneNumberError.setText("10 numbers only");
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
 					error[9]=true;
 				}else{
-					FaxNumberError.setText("There is problem.");
+					FaxNumberError.setText("10 or 11 numbers only");
 				}
 				
 				if(email.indexOf('@')==1){
@@ -357,7 +357,7 @@ public class AddressBook {
 					}
 				}
 				
-				if(error[12]=true){
+				if(error[11]==true){
 					try {
 						Connection conn = connect();
 						PreparedStatement pst = conn.prepareStatement(sql);
@@ -378,6 +378,19 @@ public class AddressBook {
 						
 						pst.close();
 						conn.close();
+						
+						CustomerIdError.setText("");
+						CustomerNameError.setText("");
+						AddressLine1Error.setText("");
+						AddressLine2Error.setText("");
+						AddressLine3Error.setText("");
+						CityError.setText("");
+						ProvinceError.setText("");
+						CountryError.setText("");
+						PostalCodeError.setText("");
+						PhoneNumberError.setText("");
+						FaxNumberError.setText("");
+						EmailAddressError.setText("");
 						
 					} catch(SQLException ex) {
 						System.out.println(ex.getMessage());

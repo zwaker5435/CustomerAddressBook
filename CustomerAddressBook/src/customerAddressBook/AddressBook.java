@@ -27,8 +27,7 @@ public class AddressBook {
 	public AddressBook(){
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
-		
-		
+	
 		//creates a table model and sets column headings
 		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
 		model = new DefaultTableModel();
@@ -82,6 +81,20 @@ public class AddressBook {
 		JLabel FaxNumber = new JLabel();
 		JLabel EmailAddress = new JLabel();
 		
+		// Error JLabels
+		JLabel CustomerIdError = new JLabel();
+		JLabel CustomerNameError = new JLabel();
+		JLabel AddressLine1Error = new JLabel();
+		JLabel AddressLine2Error = new JLabel();
+		JLabel AddressLine3Error = new JLabel();
+		JLabel CityError = new JLabel();
+		JLabel ProvinceError = new JLabel();
+		JLabel CountryError = new JLabel();
+		JLabel PostalCodeError = new JLabel();
+		JLabel PhoneNumberError = new JLabel();
+		JLabel FaxNumberError = new JLabel();
+		JLabel EmailAddressError = new JLabel();
+		
 		//buttons
 		JButton btnAdd = new JButton();
 		JButton btnDelete = new JButton();
@@ -108,41 +121,69 @@ public class AddressBook {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
+		//name text field labels
+		/**
+		CustomerIdError.setText("There is problem.");
+		CustomerNameError.setText("There is problem.");
+		AddressLine1Error.setText("There is problem.");
+		AddressLine2Error.setText("There is problem.");
+		AddressLine3Error.setText("There is problem.");
+		CityError.setText("There is problem.");
+		ProvinceError.setText("There is problem.");
+		CountryError.setText("There is problem.");
+		PostalCodeError.setText("There is problem.");
+		PhoneNumberError.setText("There is problem.");
+		FaxNumberError.setText("There is problem.");
+		EmailAddressError.setText("There is problem.");
+		**/
 		//name IdSearch
 		
 		IdSearch.setText("Id:");
-		
 		//set text fields
-		textCustomerId.setBounds(20, 850, 100, 25);
-		textCustomerName.setBounds(140, 850, 100, 25);
-		textAddressLine1.setBounds(260, 850, 100, 25);
-		textAddressLine2.setBounds(380, 850, 100, 25);
-		textAddressLine3.setBounds(500, 850, 100, 25);
-		textCity.setBounds(620, 850, 100, 25);
-		textProvince.setBounds(740, 850, 100, 25);
-		textCountry.setBounds(860, 850, 100, 25);
-		textPostalCode.setBounds(980, 850, 100, 25);
-		textPhoneNumber.setBounds(1100, 850, 100, 25);
-		textFaxNumber.setBounds(1220, 850, 100, 25);
-		textEmailAddress.setBounds(1340, 850, 100, 25);
+		textCustomerId.setBounds(20, 805, 100, 25);
+		textCustomerName.setBounds(140, 805, 100, 25);
+		textAddressLine1.setBounds(260, 805, 100, 25);
+		textAddressLine2.setBounds(380, 805, 100, 25);
+		textAddressLine3.setBounds(500, 805, 100, 25);
+		textCity.setBounds(620, 805, 100, 25);
+		textProvince.setBounds(740, 805, 100, 25);
+		textCountry.setBounds(860, 805, 100, 25);
+		textPostalCode.setBounds(980, 805, 100, 25);
+		textPhoneNumber.setBounds(1100, 805, 100, 25);
+		textFaxNumber.setBounds(1220, 805, 100, 25);
+		textEmailAddress.setBounds(1340, 805, 100, 25);
+		
+		//set text field errors
+		CustomerIdError.setBounds(20, 850, 100, 25);
+		CustomerNameError.setBounds(140, 850, 100, 25);
+		AddressLine1Error.setBounds(260, 850, 100, 25);
+		AddressLine2Error.setBounds(380, 850, 100, 25);
+		AddressLine3Error.setBounds(500, 850, 100, 25);
+		CityError.setBounds(620, 850, 100, 25);
+		ProvinceError.setBounds(740, 850, 100, 25);
+		CountryError.setBounds(860, 850, 100, 25);
+		PostalCodeError.setBounds(980, 850, 100, 25);
+		PhoneNumberError.setBounds(1100, 850, 100, 25);
+		FaxNumberError.setBounds(1220, 850, 100, 25);
+		EmailAddressError.setBounds(1340, 850, 100, 25);
 		
 		//set search fields
 		textIdSearch.setBounds(530, 895, 75, 25);
 		IdSearch.setBounds(500, 895, 20, 25);
 		
 		//set text field labels
-		CustomerId.setBounds(20, 805, 100, 25);
-		CustomerName.setBounds(140, 805, 100, 25);
-		AddressLine1.setBounds(260, 805, 100, 25);
-		AddressLine2.setBounds(380, 805, 100, 25);
-		AddressLine3.setBounds(500, 805, 100, 25);
-		City.setBounds(620, 805, 100, 25);
-		Province.setBounds(740, 805, 100, 25);
-		Country.setBounds(860, 805, 100, 25);
-		PostalCode.setBounds(980, 805, 100, 25);
-		PhoneNumber.setBounds(1100, 805, 100, 25);
-		FaxNumber.setBounds(1220, 805, 100, 25);
-		EmailAddress.setBounds(1340, 805, 100, 25);
+		CustomerId.setBounds(20, 755, 100, 25);
+		CustomerName.setBounds(140, 755, 100, 25);
+		AddressLine1.setBounds(260, 755, 100, 25);
+		AddressLine2.setBounds(380, 755, 100, 25);
+		AddressLine3.setBounds(500, 755, 100, 25);
+		City.setBounds(620, 755, 100, 25);
+		Province.setBounds(740, 755, 100, 25);
+		Country.setBounds(860, 755, 100, 25);
+		PostalCode.setBounds(980, 755, 100, 25);
+		PhoneNumber.setBounds(1100, 755, 100, 25);
+		FaxNumber.setBounds(1220, 755, 100, 25);
+		EmailAddress.setBounds(1340, 755, 100, 25);
 		
 		//set buttons
 		btnAdd.setBounds(20, 895, 75, 25);
@@ -183,6 +224,19 @@ public class AddressBook {
 		frame.add(FaxNumber);
 		frame.add(EmailAddress);
 		
+		frame.add(CustomerIdError);
+		frame.add(CustomerNameError);
+		frame.add(AddressLine1Error);
+		frame.add(AddressLine2Error);
+		frame.add(AddressLine3Error);
+		frame.add(CityError);
+		frame.add(ProvinceError);
+		frame.add(CountryError);
+		frame.add(PostalCodeError);
+		frame.add(PhoneNumberError);
+		frame.add(FaxNumberError);
+		frame.add(EmailAddressError);
+		
 		frame.add(textIdSearch);
 		frame.add(IdSearch);
 		
@@ -215,82 +269,127 @@ public class AddressBook {
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO CustomerAddressBook (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-				String name, address1, address2, address3, phone, fax, email;
+				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
 				boolean[] error = new boolean[12]; 
 				
-				email = textEmailAddress.getText();
+				name = textCustomerName.getText();
+				address1 = textAddressLine1.getText();
+				address2 = textAddressLine2.getText();
+				address3 = textAddressLine3.getText();
+				city = textCity.getText();
+				province = textProvince.getText();
+				country = textCountry.getText();
+				postalcode = textPostalCode.getText();
 				phone = textPhoneNumber.getText();
 				phone.replaceAll("(", "");
 				phone.replaceAll(")", "");
 				phone.replaceAll("-", "");
+				fax = textFaxNumber.getText();
+				email = textEmailAddress.getText();
 				
-
-				if(phone.length()==10){
-					
+				
+				
+				if(name.length()<=30){
+					error[0]=true;
+				}else{
+					CustomerNameError.setText("There is problem.");
 				}
 
-				if(phone.length()==10){
-					
+				if(address1.length()<=30){
+					error[1]=true;
+				}else{
+					AddressLine1Error.setText("There is problem.");
 				}
 
-				if(phone.length()==10){
-					
+				if(address2.length()<=30){
+					error[2]=true;
+				}else{
+					AddressLine2Error.setText("There is problem.");
 				}
 
-				if(phone.length()==10){
-					
+				if(address3.length()<=30){
+					error[3]=true;
+				}else{
+					AddressLine3Error.setText("There is problem.");
 				}
 
-				if(phone.length()==10){
-					
+				if(city.length()==30){
+					error[4]=true;
+				}else{
+					CityError.setText("There is problem.");
 				}
 
-				if(phone.length()==10){
-					
+				if(province.length()==20){
+					error[5]=true;
+				}else{
+					ProvinceError.setText("There is problem.");
 				}
-				if(phone.length()==10){
-					
+				
+				if(country.length()<=36){
+					error[6]=true;
+				}else{
+					CountryError.setText("There is problem.");
+				}
+
+				if(postalcode.length()<=6){
+					error[7]=true;
+				}else{
+					PostalCodeError.setText("There is problem.");
 				}
 				
 				if(phone.length()==10){
-					
+					error[8]=true;
+				}else{
+					PhoneNumberError.setText("There is problem.");
 				}
 				
-				if(phone.length()==10){
-					
+				if(fax.length()==10 || fax.length()==11){
+					error[9]=true;
+				}else{
+					FaxNumberError.setText("There is problem.");
 				}
 				
 				if(email.indexOf('@')==1){
-					error[11]=true;
+					error[10]=true;
+				}else{
+					EmailAddressError.setText("There is problem.");
 				}
 				
-				try {
-					Connection conn = connect();
-					PreparedStatement pst = conn.prepareStatement(sql);
-					
-					pst.setString(1, textCustomerName.getText());
-					pst.setString(2, textAddressLine1.getText());
-					pst.setString(3, textAddressLine2.getText());
-					pst.setString(4, textAddressLine3.getText());
-					pst.setString(5, textCity.getText());
-					pst.setString(6, textProvince.getText());
-					pst.setString(7, textCountry.getText());
-					pst.setString(8, textPostalCode.getText());
-					pst.setString(9, textPhoneNumber.getText());
-					pst.setString(10, textFaxNumber.getText());
-					pst.setString(11, textEmailAddress.getText());
-					
-					pst.executeUpdate();
-					
-					pst.close();
-					conn.close();
-					
-				} catch(SQLException ex) {
-					System.out.println(ex.getMessage());
+				//Checks if any are false
+				for(int i=0;i<error.length;i++){
+					if(error[i]=false){
+						error[12]=false;
+					}
 				}
 				
-				refresh();
-				
+				if(error[12]=true){
+					try {
+						Connection conn = connect();
+						PreparedStatement pst = conn.prepareStatement(sql);
+						
+						pst.setString(1, textCustomerName.getText());
+						pst.setString(2, textAddressLine1.getText());
+						pst.setString(3, textAddressLine2.getText());
+						pst.setString(4, textAddressLine3.getText());
+						pst.setString(5, textCity.getText());
+						pst.setString(6, textProvince.getText());
+						pst.setString(7, textCountry.getText());
+						pst.setString(8, textPostalCode.getText());
+						pst.setString(9, textPhoneNumber.getText());
+						pst.setString(10, textFaxNumber.getText());
+						pst.setString(11, textEmailAddress.getText());
+						
+						pst.executeUpdate();
+						
+						pst.close();
+						conn.close();
+						
+					} catch(SQLException ex) {
+						System.out.println(ex.getMessage());
+					}
+					
+					refresh();
+				}
 			}
 			
 		});
@@ -422,5 +521,5 @@ public class AddressBook {
 		}
 		
 	}
-
+	
 }

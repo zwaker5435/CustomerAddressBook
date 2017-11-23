@@ -284,14 +284,12 @@ public class AddressBook {
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
 				
-				
-				
 				if(name.length()<=30){
 					error[0]=true;
 				}else{
 					CustomerNameError.setText("There is problem.");
 				}
-
+				
 				if(address1.length()<=30){
 					error[1]=true;
 				}else{
@@ -337,13 +335,13 @@ public class AddressBook {
 				if(phone.length()==10){
 					error[8]=true;
 				}else{
-					PhoneNumberError.setText("There is problem.");
+					PhoneNumberError.setText("10 numbers only");
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
 					error[9]=true;
 				}else{
-					FaxNumberError.setText("There is problem.");
+					FaxNumberError.setText("10 or 11 numbers only");
 				}
 				
 				if(email.indexOf('@')==1){
@@ -380,6 +378,19 @@ public class AddressBook {
 						
 						pst.close();
 						conn.close();
+						
+						CustomerIdError.setText("");
+						CustomerNameError.setText("");
+						AddressLine1Error.setText("");
+						AddressLine2Error.setText("");
+						AddressLine3Error.setText("");
+						CityError.setText("");
+						ProvinceError.setText("");
+						CountryError.setText("");
+						PostalCodeError.setText("");
+						PhoneNumberError.setText("");
+						FaxNumberError.setText("");
+						EmailAddressError.setText("");
 						
 					} catch(SQLException ex) {
 						System.out.println(ex.getMessage());

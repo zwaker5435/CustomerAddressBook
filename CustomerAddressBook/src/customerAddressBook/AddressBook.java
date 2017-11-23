@@ -314,7 +314,7 @@ public class AddressBook {
 					CityError.setText("There is problem.");
 				}
 
-				if(province.length()==20){
+				if(province.length()<=20){
 					error[5]=true;
 				}else{
 					ProvinceError.setText("There is problem.");

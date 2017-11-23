@@ -121,24 +121,9 @@ public class AddressBook {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
-		//name text field labels
-		/**
-		CustomerIdError.setText("There is problem.");
-		CustomerNameError.setText("There is problem.");
-		AddressLine1Error.setText("There is problem.");
-		AddressLine2Error.setText("There is problem.");
-		AddressLine3Error.setText("There is problem.");
-		CityError.setText("There is problem.");
-		ProvinceError.setText("There is problem.");
-		CountryError.setText("There is problem.");
-		PostalCodeError.setText("There is problem.");
-		PhoneNumberError.setText("There is problem.");
-		FaxNumberError.setText("There is problem.");
-		EmailAddressError.setText("There is problem.");
-		**/
 		//name IdSearch
-		
 		IdSearch.setText("Id:");
+		
 		//set text fields
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);
@@ -284,76 +269,92 @@ public class AddressBook {
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
 				
+				
+				
 				if(name.length()<=30){
 					error[0]=true;
 				}else{
 					CustomerNameError.setText("There is problem.");
+					error[0]=false;
 				}
 				
 				if(address1.length()<=30){
 					error[1]=true;
 				}else{
 					AddressLine1Error.setText("There is problem.");
+					error[1]=false;
 				}
 
 				if(address2.length()<=30){
 					error[2]=true;
 				}else{
 					AddressLine2Error.setText("There is problem.");
+					error[2]=false;
 				}
 
 				if(address3.length()<=30){
 					error[3]=true;
 				}else{
 					AddressLine3Error.setText("There is problem.");
+					error[3]=false;
 				}
 
 				if(city.length()<=30){
 					error[4]=true;
 				}else{
 					CityError.setText("There is problem.");
+					error[4]=false;
 				}
 
 				if(province.length()<=20){
 					error[5]=true;
 				}else{
 					ProvinceError.setText("There is problem.");
+					error[5]=false;
 				}
 				
 				if(country.length()<=36){
 					error[6]=true;
 				}else{
 					CountryError.setText("There is problem.");
+					error[6]=false;
 				}
 
 				if(postalcode.length()<=6){
 					error[7]=true;
 				}else{
 					PostalCodeError.setText("There is problem.");
+					error[7]=false;
 				}
 				
 				if(phone.length()==10){
 					error[8]=true;
 				}else{
 					PhoneNumberError.setText("10 numbers only");
+					error[8]=false;
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
 					error[9]=true;
 				}else{
 					FaxNumberError.setText("10 or 11 numbers only");
+					error[9]=false;
 				}
 				
 				if(email.indexOf('@')==1){
 					error[10]=true;
 				}else{
+					error[10]=false;
 					EmailAddressError.setText("There must be an @");
 				}
 				
 				//Checks if any are false
 				for(int i=0;i<error.length;i++){
 					if(error[i]=false){
-						error[12]=false;
+						error[11]=false;
+					}
+					else{
+						error[11] = true;
 					}
 				}
 				
@@ -429,6 +430,154 @@ public class AddressBook {
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "UPDATE CustomerAddressBook SET CustomerName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
+				
+				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
+				boolean[] error = new boolean[12]; 
+				
+				name = textCustomerName.getText();
+				address1 = textAddressLine1.getText();
+				address2 = textAddressLine2.getText();
+				address3 = textAddressLine3.getText();
+				city = textCity.getText();
+				province = textProvince.getText();
+				country = textCountry.getText();
+				postalcode = textPostalCode.getText();
+				phone = textPhoneNumber.getText();
+				fax = textFaxNumber.getText();
+				email = textEmailAddress.getText();
+				
+				
+				
+				if(name.length()<=30){
+					error[0]=true;
+				}else{
+					CustomerNameError.setText("There is problem.");
+					error[0]=false;
+				}
+				
+				if(address1.length()<=30){
+					error[1]=true;
+				}else{
+					AddressLine1Error.setText("There is problem.");
+					error[1]=false;
+				}
+
+				if(address2.length()<=30){
+					error[2]=true;
+				}else{
+					AddressLine2Error.setText("There is problem.");
+					error[2]=false;
+				}
+
+				if(address3.length()<=30){
+					error[3]=true;
+				}else{
+					AddressLine3Error.setText("There is problem.");
+					error[3]=false;
+				}
+
+				if(city.length()<=30){
+					error[4]=true;
+				}else{
+					CityError.setText("There is problem.");
+					error[4]=false;
+				}
+
+				if(province.length()<=20){
+					error[5]=true;
+				}else{
+					ProvinceError.setText("There is problem.");
+					error[5]=false;
+				}
+				
+				if(country.length()<=36){
+					error[6]=true;
+				}else{
+					CountryError.setText("There is problem.");
+					error[6]=false;
+				}
+
+				if(postalcode.length()<=6){
+					error[7]=true;
+				}else{
+					PostalCodeError.setText("There is problem.");
+					error[7]=false;
+				}
+				
+				if(phone.length()==10){
+					error[8]=true;
+				}else{
+					PhoneNumberError.setText("10 numbers only");
+					error[8]=false;
+				}
+				
+				if(fax.length()==10 || fax.length()==11){
+					error[9]=true;
+				}else{
+					FaxNumberError.setText("10 or 11 numbers only");
+					error[9]=false;
+				}
+				
+				if(email.indexOf('@')==1){
+					error[10]=true;
+				}else{
+					error[10]=false;
+					EmailAddressError.setText("There must be an @");
+				}
+				
+				//Checks if any are false
+				for(int i=0;i<error.length;i++){
+					if(error[i]=false){
+						error[11]=false;
+					}
+					else{
+						error[11] = true;
+					}
+				}
+				
+				if(error[11]==true){
+					try {
+						Connection conn = connect();
+						PreparedStatement pst = conn.prepareStatement(sql);
+						
+						pst.setString(1, textCustomerName.getText());
+						pst.setString(2, textAddressLine1.getText());
+						pst.setString(3, textAddressLine2.getText());
+						pst.setString(4, textAddressLine3.getText());
+						pst.setString(5, textCity.getText());
+						pst.setString(6, textProvince.getText());
+						pst.setString(7, textCountry.getText());
+						pst.setString(8, textPostalCode.getText());
+						pst.setString(9, textPhoneNumber.getText());
+						pst.setString(10, textFaxNumber.getText());
+						pst.setString(11, textEmailAddress.getText());
+						
+						pst.executeUpdate();
+						
+						pst.close();
+						conn.close();
+						
+						CustomerIdError.setText("");
+						CustomerNameError.setText("");
+						AddressLine1Error.setText("");
+						AddressLine2Error.setText("");
+						AddressLine3Error.setText("");
+						CityError.setText("");
+						ProvinceError.setText("");
+						CountryError.setText("");
+						PostalCodeError.setText("");
+						PhoneNumberError.setText("");
+						FaxNumberError.setText("");
+						EmailAddressError.setText("");
+						
+					} catch(SQLException ex) {
+						System.out.println(ex.getMessage());
+					}
+					
+					refresh();
+				}
+				
+				/**
 				try {
 					Connection conn = connect();
 					PreparedStatement pst = conn.prepareStatement(sql);
@@ -457,6 +606,7 @@ public class AddressBook {
 				}
 				
 				refresh();
+				**/
 			}
 			
 		});

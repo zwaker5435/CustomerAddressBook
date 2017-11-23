@@ -367,6 +367,9 @@ public class AddressBook {
 					if(error[i]=false){
 						error[11]=false;
 					}
+					else{
+						error[11] = true;
+					}
 				}
 				
 				if(error[11]==true){

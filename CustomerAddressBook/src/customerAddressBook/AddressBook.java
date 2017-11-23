@@ -347,7 +347,7 @@ public class AddressBook {
 				if(email.indexOf('@')==1){
 					error[10]=true;
 				}else{
-					EmailAddressError.setText("There is problem.");
+					EmailAddressError.setText("There must be an @");
 				}
 				
 				//Checks if any are false

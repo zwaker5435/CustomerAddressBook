@@ -269,7 +269,9 @@ public class AddressBook {
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
 				
-				
+				for(int i=0;i<error.length;i++) {
+					error[i] = false;
+				}
 				
 				if(name.length()<=30){
 					error[0]=true;

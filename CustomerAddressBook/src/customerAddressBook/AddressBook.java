@@ -288,72 +288,83 @@ public class AddressBook {
 					error[0]=true;
 				}else{
 					CustomerNameError.setText("There is problem.");
+					error[0]=false;
 				}
 				
 				if(address1.length()<=30){
 					error[1]=true;
 				}else{
 					AddressLine1Error.setText("There is problem.");
+					error[1]=false;
 				}
 
 				if(address2.length()<=30){
 					error[2]=true;
 				}else{
 					AddressLine2Error.setText("There is problem.");
+					error[2]=false;
 				}
 
 				if(address3.length()<=30){
 					error[3]=true;
 				}else{
 					AddressLine3Error.setText("There is problem.");
+					error[3]=false;
 				}
 
 				if(city.length()<=30){
 					error[4]=true;
 				}else{
 					CityError.setText("There is problem.");
+					error[4]=false;
 				}
 
 				if(province.length()<=20){
 					error[5]=true;
 				}else{
 					ProvinceError.setText("There is problem.");
+					error[5]=false;
 				}
 				
 				if(country.length()<=36){
 					error[6]=true;
 				}else{
 					CountryError.setText("There is problem.");
+					error[6]=false;
 				}
 
 				if(postalcode.length()<=6){
 					error[7]=true;
 				}else{
 					PostalCodeError.setText("There is problem.");
+					error[7]=false;
 				}
 				
 				if(phone.length()==10){
 					error[8]=true;
 				}else{
 					PhoneNumberError.setText("10 numbers only");
+					error[8]=false;
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
 					error[9]=true;
 				}else{
 					FaxNumberError.setText("10 or 11 numbers only");
+					error[9]=false;
 				}
 				
 				if(email.indexOf('@')==1){
 					error[10]=true;
 				}else{
 					EmailAddressError.setText("There is problem.");
+					error[10]=false;
 				}
 				
 				//Checks if any are false
 				for(int i=0;i<error.length;i++){
 					if(error[i]=false){
-						error[12]=false;
+						error[11]=false;
 					}
 				}
 				

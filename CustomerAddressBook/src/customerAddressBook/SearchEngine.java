@@ -36,8 +36,6 @@ public class SearchEngine extends JFrame {
 				
 		table.setModel(model);
 				
-		//stuff
-				
 		table.getColumnModel().getColumn(0).setMinWidth(120);
 		table.getColumnModel().getColumn(1).setMinWidth(120);
 		table.getColumnModel().getColumn(2).setMinWidth(120);

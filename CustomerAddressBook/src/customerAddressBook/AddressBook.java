@@ -345,7 +345,7 @@ public class AddressBook {
 					error[10]=true;
 				}else{
 					error[10]=false;
-					EmailAddressError.setText("There must be an @");
+					EmailAddressError.setText("You need a @");
 				}
 				
 				//Checks if any are false
@@ -522,7 +522,7 @@ public class AddressBook {
 					error[10]=true;
 				}else{
 					error[10]=false;
-					EmailAddressError.setText("There must be an @");
+					EmailAddressError.setText("You need a @");
 				}
 				
 				//Checks if any are false

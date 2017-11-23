@@ -57,7 +57,7 @@ public class SearchEngine extends JFrame {
 		
 		add(pane);
 	}
-	
+	//stuff
 	private Connection connect(){
 		Connection conn = null;
 		

@@ -121,24 +121,9 @@ public class AddressBook {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
-		//name text field labels
-		/**
-		CustomerIdError.setText("There is problem.");
-		CustomerNameError.setText("There is problem.");
-		AddressLine1Error.setText("There is problem.");
-		AddressLine2Error.setText("There is problem.");
-		AddressLine3Error.setText("There is problem.");
-		CityError.setText("There is problem.");
-		ProvinceError.setText("There is problem.");
-		CountryError.setText("There is problem.");
-		PostalCodeError.setText("There is problem.");
-		PhoneNumberError.setText("There is problem.");
-		FaxNumberError.setText("There is problem.");
-		EmailAddressError.setText("There is problem.");
-		**/
 		//name IdSearch
-		
 		IdSearch.setText("Id:");
+		
 		//set text fields
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);

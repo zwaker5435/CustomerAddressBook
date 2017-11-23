@@ -1,6 +1,10 @@
 package customerAddressBook;
 
-import java.awt.BorderLayout;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -8,20 +12,18 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.JTextField;
 
 public class SearchEngine extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
 	static DefaultTableModel model;
+	static Object[] row;
 
 	/**
 	 * Create the frame.
 	 */
 	public SearchEngine(String id) {
-		setSize(1500, 500);
+		setSize(1473, 463);
 		setLocationRelativeTo(null);
 		setVisible(true);
 		contentPane = new JPanel();
@@ -53,9 +55,59 @@ public class SearchEngine extends JFrame {
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);
 		
-		//setLayout(null);
-		
 		add(pane);
+	}
+	//stuff
+	private Connection connect(){
+		Connection conn = null;
+		
+		try{
+			String url="jdbc:sqlite:C:/AddressBook/AddressBook.db";
+			conn = DriverManager.getConnection(url);
+			
+			System.out.println("Successful connection");
+		}catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		
+		return conn;
+	}
+	
+	private void refresh(){
+		row = new Object[12];
+		model.setRowCount(0);
+		
+		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
+		
+		try{
+			Connection conn = connect();
+			Statement stat = conn.createStatement();
+			ResultSet rs = stat.executeQuery(sql);
+			
+			while(rs.next()){
+				row[0] = rs.getInt("CustomerId");
+				row[1] = rs.getString("CustomerName");
+				row[2] = rs.getString("AddressLine1");
+				row[3] = rs.getString("AddressLine2");
+				row[4] = rs.getString("AddressLine3");
+				row[5] = rs.getString("City");
+				row[6] = rs.getString("Province");
+				row[7] = rs.getString("Country");
+				row[8] = rs.getString("PostalCode");
+				row[9] = rs.getString("PhoneNumber");
+				row[10] = rs.getString("FaxNumber");
+				row[11] = rs.getString("EmailAddress");
+				
+				model.addRow(row);
+			}
+			
+			rs.close();
+			stat.close();
+			conn.close();
+			
+		}catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
 		
 	}
 }

@@ -281,20 +281,15 @@ public class AddressBook {
 				country = textCountry.getText();
 				postalcode = textPostalCode.getText();
 				phone = textPhoneNumber.getText();
-				phone.replaceAll("(", "");
-				phone.replaceAll(")", "");
-				phone.replaceAll("-", "");
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
-				
-				
 				
 				if(name.length()<=30){
 					error[0]=true;
 				}else{
 					CustomerNameError.setText("There is problem.");
 				}
-
+				
 				if(address1.length()<=30){
 					error[1]=true;
 				}else{
@@ -340,7 +335,7 @@ public class AddressBook {
 				if(phone.length()==10){
 					error[8]=true;
 				}else{
-					PhoneNumberError.setText("There is problem.");
+					PhoneNumberError.setText("It must be 10 numbers");
 				}
 				
 				if(fax.length()==10 || fax.length()==11){

@@ -65,7 +65,7 @@ public class AddressBook {
 		
 		//search fields
 		JTextField textIdSearch = new JTextField();
-		JTextField IdSearch = new JTextField();
+		JLabel IdSearch = new JLabel();
 		
 		//text field labels
 		JLabel CustomerId = new JLabel();
@@ -463,8 +463,10 @@ public class AddressBook {
 		
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String id;
 				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress)";
-				
+				id = textIdSearch.getText();
+				SearchEngine search = new SearchEngine(id);
 			}
 			
 		});

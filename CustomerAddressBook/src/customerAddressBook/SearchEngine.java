@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
@@ -48,6 +49,13 @@ public class SearchEngine extends JFrame {
 		table.getColumnModel().getColumn(9).setMinWidth(120);
 		table.getColumnModel().getColumn(10).setMinWidth(120);
 		table.getColumnModel().getColumn(11).setMinWidth(120);
+		
+		JScrollPane pane = new JScrollPane(table);
+		pane.setBounds(8, 8, 1440, 400);
+		
+		//setLayout(null);
+		
+		add(pane);
 		
 	}
 }

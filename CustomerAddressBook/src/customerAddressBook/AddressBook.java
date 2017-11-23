@@ -458,6 +458,7 @@ public class AddressBook {
 				String id;
 				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress)";
 				id = textIdSearch.getText();
+				SearchEngine search = new SearchEngine(id);
 			}
 			
 		});

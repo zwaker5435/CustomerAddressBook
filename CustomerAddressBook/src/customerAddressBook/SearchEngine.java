@@ -4,12 +4,10 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.BoxLayout;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JTextField;
 
 public class SearchEngine extends JFrame {
@@ -17,36 +15,47 @@ public class SearchEngine extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
+	static DefaultTableModel model;
 
 	/**
 	 * Create the frame.
 	 */
-	public SearchEngine() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 360, 150);
+	public SearchEngine(String id) {
+		setSize(1500, 500);
+		setLocationRelativeTo(null);
+		setVisible(true);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel idLabel = new JLabel("ID: ");
-		idLabel.setBounds(181, 35, 21, 16);
-		contentPane.add(idLabel);
+		JTable table = new JTable();
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(78, 31, 97, 25);
-		contentPane.add(btnNewButton);
+		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
+		model = new DefaultTableModel();
+		model.setColumnIdentifiers(columns);
+				
+		table.setModel(model);
+				
+		table.getColumnModel().getColumn(0).setMinWidth(120);
+		table.getColumnModel().getColumn(1).setMinWidth(120);
+		table.getColumnModel().getColumn(2).setMinWidth(120);
+		table.getColumnModel().getColumn(3).setMinWidth(120);
+		table.getColumnModel().getColumn(4).setMinWidth(120);
+		table.getColumnModel().getColumn(5).setMinWidth(120);
+		table.getColumnModel().getColumn(6).setMinWidth(120);
+		table.getColumnModel().getColumn(7).setMinWidth(120);
+		table.getColumnModel().getColumn(8).setMinWidth(120);
+		table.getColumnModel().getColumn(9).setMinWidth(120);
+		table.getColumnModel().getColumn(10).setMinWidth(120);
+		table.getColumnModel().getColumn(11).setMinWidth(120);
 		
-		textField = new JTextField();
-		textField.setBounds(0, 45, 34, 22);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		JScrollPane pane = new JScrollPane(table);
+		pane.setBounds(8, 8, 1440, 400);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(214, 32, 116, 22);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		//setLayout(null);
 		
+		add(pane);
 		
 	}
 }

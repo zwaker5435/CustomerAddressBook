@@ -281,9 +281,6 @@ public class AddressBook {
 				country = textCountry.getText();
 				postalcode = textPostalCode.getText();
 				phone = textPhoneNumber.getText();
-				phone.replaceAll("(", "");
-				phone.replaceAll(")", "");
-				phone.replaceAll("-", "");
 				fax = textFaxNumber.getText();
 				email = textEmailAddress.getText();
 				
@@ -313,7 +310,7 @@ public class AddressBook {
 					AddressLine3Error.setText("There is problem.");
 				}
 
-				if(city.length()==30){
+				if(city.length()<=30){
 					error[4]=true;
 				}else{
 					CityError.setText("There is problem.");
@@ -362,7 +359,7 @@ public class AddressBook {
 					}
 				}
 				
-				if(error[12]=true){
+				if(error[11]==true){
 					try {
 						Connection conn = connect();
 						PreparedStatement pst = conn.prepareStatement(sql);

@@ -288,7 +288,7 @@ public class AddressBook {
 				email = textEmailAddress.getText();
 				
 				for(int i=0;i<error.length;i++) {
-					error[i] = false;
+					error[i] = true;
 				}
 				
 				if(name.length()<=30){
@@ -477,7 +477,7 @@ public class AddressBook {
 				email = textEmailAddress.getText();
 				
 				for(int i=0;i<error.length;i++) {
-					error[i] = false;
+					error[i] = true;
 				}
 				
 				if(name.length()<=30){

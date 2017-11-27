@@ -361,7 +361,7 @@ public class AddressBook {
 					error[9]=false;
 				}
 				
-				if(email.indexOf('@')==1){
+				if(email.indexOf('@')!=-1){
 					error[10]=true;
 				}else{
 					error[10]=false;
@@ -554,7 +554,7 @@ public class AddressBook {
 					error[9]=false;
 				}
 				
-				if(email.indexOf('@')==1){
+				if(email.indexOf('@')!=-1){
 					error[10]=true;
 				}else{
 					error[10]=false;

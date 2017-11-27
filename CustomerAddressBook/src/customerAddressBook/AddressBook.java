@@ -462,10 +462,10 @@ public class AddressBook {
 				EmailAddressError.setText("");
 				
 				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
-				boolean[] error = new boolean[12]; 
+				boolean[] error = new boolean[12];
 				
-				for(int i=0;i<error.length;i++){
-					error[i]=true;
+				for(int i=0;i<error.length;i++) {
+					error[i] = false;
 				}
 				
 				name = textCustomerName.getText();

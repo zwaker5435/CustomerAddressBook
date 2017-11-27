@@ -433,6 +433,7 @@ public class AddressBook {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "UPDATE CustomerAddressBook SET CustomerName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
 				
+				
 				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
 				boolean[] error = new boolean[12]; 
 				

@@ -463,11 +463,7 @@ public class AddressBook {
 				
 				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
 				boolean[] error = new boolean[12];
-				
-				for(int i=0;i<error.length;i++) {
-					error[i] = false;
-				}
-				
+			
 				name = textCustomerName.getText();
 				address1 = textAddressLine1.getText();
 				address2 = textAddressLine2.getText();

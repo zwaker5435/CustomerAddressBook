@@ -254,8 +254,26 @@ public class AddressBook {
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "INSERT INTO CustomerAddressBook (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				
 				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
-				boolean[] error = new boolean[12]; 
+				boolean[] error = new boolean[12];
+				
+				for(int i=0;i<error.length;i++){
+					error[i]=true;
+				}
+				
+				CustomerIdError.setText("");
+				CustomerNameError.setText("");
+				AddressLine1Error.setText("");
+				AddressLine2Error.setText("");
+				AddressLine3Error.setText("");
+				CityError.setText("");
+				ProvinceError.setText("");
+				CountryError.setText("");
+				PostalCodeError.setText("");
+				PhoneNumberError.setText("");
+				FaxNumberError.setText("");
+				EmailAddressError.setText("");
 				
 				name = textCustomerName.getText();
 				address1 = textAddressLine1.getText();
@@ -354,9 +372,6 @@ public class AddressBook {
 				for(int i=0;i<error.length;i++){
 					if(error[i]=false){
 						error[11]=false;
-					}
-					else{
-						error[11] = true;
 					}
 				}
 				
@@ -433,9 +448,25 @@ public class AddressBook {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "UPDATE CustomerAddressBook SET CustomerName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
 				
+				CustomerIdError.setText("");
+				CustomerNameError.setText("");
+				AddressLine1Error.setText("");
+				AddressLine2Error.setText("");
+				AddressLine3Error.setText("");
+				CityError.setText("");
+				ProvinceError.setText("");
+				CountryError.setText("");
+				PostalCodeError.setText("");
+				PhoneNumberError.setText("");
+				FaxNumberError.setText("");
+				EmailAddressError.setText("");
 				
 				String name, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
 				boolean[] error = new boolean[12]; 
+				
+				for(int i=0;i<error.length;i++){
+					error[i]=true;
+				}
 				
 				name = textCustomerName.getText();
 				address1 = textAddressLine1.getText();
@@ -534,9 +565,6 @@ public class AddressBook {
 				for(int i=0;i<error.length;i++){
 					if(error[i]=false){
 						error[11]=false;
-					}
-					else{
-						error[11] = true;
 					}
 				}
 				

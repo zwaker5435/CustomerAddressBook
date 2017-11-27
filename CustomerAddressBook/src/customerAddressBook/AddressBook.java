@@ -288,7 +288,7 @@ public class AddressBook {
 				email = textEmailAddress.getText();
 				
 				for(int i=0;i<error.length;i++) {
-					error[i] = false;
+					error[i] = true;
 				}
 				
 				if(name.length()<=30){
@@ -343,7 +343,7 @@ public class AddressBook {
 				if(postalcode.length()<=6){
 					error[7]=true;
 				}else{
-					PostalCodeError.setText("There is problem.");
+					PostalCodeError.setText("6 numbers only");
 					error[7]=false;
 				}
 				
@@ -370,7 +370,7 @@ public class AddressBook {
 				
 				//Checks if any are false
 				for(int i=0;i<error.length;i++){
-					if(error[i]=false){
+					if(error[i]==false){
 						error[11]=false;
 					}
 				}
@@ -532,7 +532,7 @@ public class AddressBook {
 				if(postalcode.length()<=6){
 					error[7]=true;
 				}else{
-					PostalCodeError.setText("There is problem.");
+					PostalCodeError.setText("6 numbers only");
 					error[7]=false;
 				}
 				

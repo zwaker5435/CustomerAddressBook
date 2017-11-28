@@ -23,7 +23,6 @@ public class CustomerId {
 	static Object[] row;
 	static DefaultTableModel model;
 
-	
 	public CustomerId(){
 		JFrame frame = new JFrame();
 		JTable table = new JTable();

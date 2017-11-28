@@ -77,7 +77,7 @@ public class SearchEngine extends JFrame {
 		row = new Object[12];
 		model.setRowCount(0);
 		
-		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
+		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook WHERE CustomerId = ?";
 		
 		try{
 			Connection conn = connect();

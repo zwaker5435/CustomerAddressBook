@@ -173,11 +173,11 @@ public class AddressBook {
 		EmailAddress.setBounds(1340, 755, 100, 25);
 		
 		//set buttons
-		btnAdd.setBounds(20, 895, 75, 25);
-		btnDelete.setBounds(140, 895, 75, 25);
-		btnEdit.setBounds(260, 895, 75, 25);
-		btnSearch.setBounds(380, 895, 75, 25);
-		btnCustomerId.setBounds(380, 895, 75, 25);
+		btnAdd.setBounds(20, 885, 75, 25);
+		btnDelete.setBounds(140, 885, 75, 25);
+		btnEdit.setBounds(260, 885, 75, 25);
+		btnSearch.setBounds(500, 885, 75, 25);
+		btnCustomerId.setBounds(380, 885, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);
@@ -619,9 +619,10 @@ public class AddressBook {
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//if(textIdSearch.getText()""){
+				if(textIdSearch.getText().equals("")){
 					
-				//}
+				}
+				
 				String id;
 				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress)";
 				id = textIdSearch.getText();

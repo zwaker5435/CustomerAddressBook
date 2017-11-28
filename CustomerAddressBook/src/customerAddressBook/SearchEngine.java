@@ -85,9 +85,11 @@ public class SearchEngine extends JFrame {
 		try{
 			Connection conn = connect();
 			Statement stat = conn.createStatement();
-			ResultSet rs = stat.executeQuery(sql);
 			
 			sql = sql + id;
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()){
 				row[0] = rs.getInt("CustomerId");

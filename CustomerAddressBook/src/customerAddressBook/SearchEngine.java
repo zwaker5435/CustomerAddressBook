@@ -20,9 +20,6 @@ public class SearchEngine extends JFrame {
 	static DefaultTableModel model;
 	static Object[] row;
 
-	/**
-	 * Create the frame.
-	 */
 	public SearchEngine(String id) {
 		setSize(1473, 463);
 		setLocationRelativeTo(null);

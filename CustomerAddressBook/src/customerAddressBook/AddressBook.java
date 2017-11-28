@@ -1,3 +1,13 @@
+//fix error messages 
+//put an error message to the right of the search field
+//center labels
+//make contacts take in the right data
+
+
+
+
+
+
 package customerAddressBook;
 
 import java.awt.event.ActionEvent;

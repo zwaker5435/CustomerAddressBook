@@ -659,7 +659,7 @@ public class AddressBook {
 		
 		btnCustomerId.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				CustomerId id = new CustomerId();
 			}
 		});
 		

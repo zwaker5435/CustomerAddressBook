@@ -110,14 +110,14 @@ public class AddressBook {
 		JButton btnDelete = new JButton();
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
-		JButton btnCustomerId = new JButton();
+		JButton btnContacts = new JButton();
 		
 		//name buttons
 		btnAdd.setText("Add");
 		btnDelete.setText("Delete");
 		btnEdit.setText("Edit");
 		btnSearch.setText("Search");
-		btnCustomerId.setText("Contacts");
+		btnContacts.setText("Contacts");
 		
 		//name text field labels
 		CustomerId.setText("CustomerId");
@@ -187,7 +187,7 @@ public class AddressBook {
 		btnDelete.setBounds(140, 885, 75, 25);
 		btnEdit.setBounds(260, 885, 75, 25);
 		btnSearch.setBounds(510, 885, 75, 25);
-		btnCustomerId.setBounds(380, 885, 85, 25);
+		btnContacts.setBounds(380, 885, 85, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);
@@ -242,7 +242,7 @@ public class AddressBook {
 		frame.add(btnDelete);
 		frame.add(btnEdit);
 		frame.add(btnSearch);
-		frame.add(btnCustomerId);
+		frame.add(btnContacts);
 		
 		refresh();
 		
@@ -641,7 +641,7 @@ public class AddressBook {
 			
 		});
 		
-		btnCustomerId.addActionListener(new ActionListener() {
+		btnContacts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CustomerId id = new CustomerId();
 			}

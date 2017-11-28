@@ -649,6 +649,10 @@ public class AddressBook {
 		
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				//if(textIdSearch.getText()""){
+					
+				//}
 				String id;
 				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress)";
 				id = textIdSearch.getText();

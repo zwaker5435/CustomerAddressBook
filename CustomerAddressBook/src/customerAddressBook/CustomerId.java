@@ -422,7 +422,7 @@ public class CustomerId {
 		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "DELETE FROM CustomerAddressBook WHERE CustomerId = ?";
+				String sql = "DELETE FROM ContactTable WHERE CustomerId = ?";
 				
 				try {
 					Connection conn = connect();
@@ -444,7 +444,7 @@ public class CustomerId {
 			
 		});
 		
-		btnEdit.addActionListener(new ActionListener() {
+		btnEdit.addActionListener(new ActionListener() {//13 ? 12 things to fill them
 			public void actionPerformed(ActionEvent e) {
 				String sql = "UPDATE ContactTable SET FirstName = ?, LastName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
 				

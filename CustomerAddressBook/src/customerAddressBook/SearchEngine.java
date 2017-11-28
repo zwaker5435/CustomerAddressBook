@@ -73,16 +73,18 @@ public class SearchEngine extends JFrame {
 		return conn;
 	}
 	
-	private void refresh(){
+	private void refresh(int id){
 		row = new Object[12];
 		model.setRowCount(0);
 		
-		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook WHERE CustomerId = ?";
+		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook WHERE CustomerId =";
 		
 		try{
 			Connection conn = connect();
 			Statement stat = conn.createStatement();
 			ResultSet rs = stat.executeQuery(sql);
+
+			sql = sql + id;
 			
 			while(rs.next()){
 				row[0] = rs.getInt("CustomerId");
@@ -104,6 +106,7 @@ public class SearchEngine extends JFrame {
 			rs.close();
 			stat.close();
 			conn.close();
+			
 			
 		}catch(SQLException e){
 			System.out.println(e.getMessage());

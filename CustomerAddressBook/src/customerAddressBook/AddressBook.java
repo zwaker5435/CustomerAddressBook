@@ -107,7 +107,7 @@ public class AddressBook {
 		btnDelete.setText("Delete");
 		btnEdit.setText("Edit");
 		btnSearch.setText("Search");
-		btnCustomerId.setText("Customer Id");
+		btnCustomerId.setText("Contacts");
 		
 		//name text field labels
 		CustomerId.setText("CustomerId");
@@ -155,8 +155,8 @@ public class AddressBook {
 		EmailAddressError.setBounds(1340, 850, 100, 25);
 		
 		//set search fields
-		textIdSearch.setBounds(530, 895, 75, 25);
-		IdSearch.setBounds(500, 895, 20, 25);
+		textIdSearch.setBounds(660, 885, 75, 25);
+		IdSearch.setBounds(630, 885, 20, 25);
 		
 		//set text field labels
 		CustomerId.setBounds(20, 755, 100, 25);
@@ -176,8 +176,8 @@ public class AddressBook {
 		btnAdd.setBounds(20, 885, 75, 25);
 		btnDelete.setBounds(140, 885, 75, 25);
 		btnEdit.setBounds(260, 885, 75, 25);
-		btnSearch.setBounds(500, 885, 75, 25);
-		btnCustomerId.setBounds(380, 885, 75, 25);
+		btnSearch.setBounds(510, 885, 75, 25);
+		btnCustomerId.setBounds(380, 885, 85, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);

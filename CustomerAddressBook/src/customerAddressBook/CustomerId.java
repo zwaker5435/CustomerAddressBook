@@ -157,7 +157,7 @@ public class CustomerId {
 		AddressLine2.setBounds(500, 755, 100, 25);
 		AddressLine3.setBounds(620, 755, 100, 25);
 		City.setBounds(740, 755, 100, 25);
-		Province.setBounds(860), 755, 100, 25);
+		Province.setBounds(860, 755, 100, 25);
 		Country.setBounds(980, 755, 100, 25);
 		PostalCode.setBounds(1100, 755, 100, 25);
 		PhoneNumber.setBounds(1220, 755, 100, 25);
@@ -578,27 +578,25 @@ public class CustomerId {
 						Connection conn = connect();
 						PreparedStatement pst = conn.prepareStatement(sql);
 						
-						pst.setString(1, textCustomerName.getText());
-						pst.setString(2, textAddressLine1.getText());
-						pst.setString(3, textAddressLine2.getText());
-						pst.setString(4, textAddressLine3.getText());
-						pst.setString(5, textCity.getText());
-						pst.setString(6, textProvince.getText());
-						pst.setString(7, textCountry.getText());
-						pst.setString(8, textPostalCode.getText());
-						pst.setString(9, textPhoneNumber.getText());
-						pst.setString(10, textFaxNumber.getText());
-						pst.setString(11, textEmailAddress.getText());
 						
-						pst.setInt(12, Integer.parseInt(textContactId.getText()));
+						pst.setString(1, textAddressLine1.getText());
+						pst.setString(2, textAddressLine2.getText());
+						pst.setString(3, textAddressLine3.getText());
+						pst.setString(4, textCity.getText());
+						pst.setString(5, textProvince.getText());
+						pst.setString(6, textCountry.getText());
+						pst.setString(7, textPostalCode.getText());
+						pst.setString(8, textPhoneNumber.getText());
+						pst.setString(9, textFaxNumber.getText());
+						pst.setString(10, textEmailAddress.getText());
+						
+						pst.setInt(11, Integer.parseInt(textContactId.getText()));
 						
 						pst.executeUpdate();
 						
 						pst.close();
 						conn.close();
 						
-						CustomerIdError.setText("");
-						CustomerNameError.setText("");
 						AddressLine1Error.setText("");
 						AddressLine2Error.setText("");
 						AddressLine3Error.setText("");

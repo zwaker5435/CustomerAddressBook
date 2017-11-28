@@ -657,6 +657,12 @@ public class AddressBook {
 			
 		});
 		
+		btnCustomerId.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
 		frame.setSize(2000, 1000);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

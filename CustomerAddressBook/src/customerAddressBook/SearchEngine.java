@@ -2,6 +2,7 @@ package customerAddressBook;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -56,6 +57,8 @@ public class SearchEngine extends JFrame {
 		pane.setBounds(8, 8, 1440, 400);
 		
 		add(pane);
+		
+		refresh(id);
 	}
 	
 	private Connection connect(){
@@ -73,16 +76,19 @@ public class SearchEngine extends JFrame {
 		return conn;
 	}
 	
-	private void refresh(){
+	private void refresh(String id){
 		row = new Object[12];
 		model.setRowCount(0);
 		
-		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
+		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook WHERE CustomerId = ?";
 		
 		try{
 			Connection conn = connect();
 			Statement stat = conn.createStatement();
 			ResultSet rs = stat.executeQuery(sql);
+			PreparedStatement pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, id);
 			
 			while(rs.next()){
 				row[0] = rs.getInt("CustomerId");

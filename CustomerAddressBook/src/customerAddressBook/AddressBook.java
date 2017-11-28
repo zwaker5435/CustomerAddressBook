@@ -2,6 +2,7 @@
 //put an error message to the right of the search field
 //center labels
 //make contacts take in the right data
+//fix contacts tabel so that you can acually add things
 
 
 

@@ -15,6 +15,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.InputMismatchException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -67,6 +68,7 @@ public class AddressBook {
 		
 		JTextField textIdSearch = new JTextField();
 		JLabel IdSearch = new JLabel();
+		JLabel IdSearcherror = new JLabel();
 		
 		JLabel CustomerId = new JLabel();
 		JLabel CustomerName = new JLabel();
@@ -121,6 +123,7 @@ public class AddressBook {
 		
 		IdSearch.setText("Id:");
 		
+		
 		//text boxes
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);
@@ -148,6 +151,7 @@ public class AddressBook {
 		PhoneNumberError.setBounds(1100, 850, 100, 25);
 		FaxNumberError.setBounds(1220, 850, 100, 25);
 		EmailAddressError.setBounds(1340, 850, 100, 25);
+		IdSearcherror.setBounds(750, 885, 100, 25);
 		
 		//search engine textbox and label
 		textIdSearch.setBounds(660, 885, 75, 25);
@@ -222,6 +226,7 @@ public class AddressBook {
 		
 		frame.add(textIdSearch);
 		frame.add(IdSearch);
+		frame.add(IdSearcherror);
 		
 		frame.add(btnAdd);
 		frame.add(btnDelete);
@@ -613,15 +618,45 @@ public class AddressBook {
 		
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM CustomerAddressBook";
 				
-				if(textIdSearch.getText().equals("")){
+				
+				try{
+					Connection conn = connect();
+					PreparedStatement ps = conn.prepareStatement(sql);
+					ResultSet rs = ps.executeQuery();
 					
+					Integer result = Integer.valueOf(textIdSearch.getText());
+					
+					
+					
+					int size = 0;
+					while(rs.next()){
+						size++;
+					}
+					
+					System.out.println(result);
+					
+					if(result<=size && result>=0){
+					
+						SearchEngine search = new SearchEngine(textIdSearch.getText());
+						
+						
+					}else{
+						IdSearcherror.setText("that is not a number");
+					}
+					
+					rs.close();
+					ps.close();
+					conn.close();
+					
+				}catch(NumberFormatException ex) {
+					IdSearcherror.setText("Invalid number");
+				}catch(SQLException e2){
+					System.out.println(e2.getMessage());
 				}
 				
-				String id;
-				String sql = "INSERT INTO CustomerAddressBook  (CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress)";
-				id = textIdSearch.getText();
-				SearchEngine search = new SearchEngine(id);
+				
 			}
 			
 		});

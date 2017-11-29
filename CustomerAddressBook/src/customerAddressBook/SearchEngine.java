@@ -106,6 +106,7 @@ public class SearchEngine extends JFrame {
 			}
 			
 			rs.close();
+			ps.close();
 			stat.close();
 			conn.close();
 			

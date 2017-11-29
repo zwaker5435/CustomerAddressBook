@@ -4,11 +4,6 @@
 //make contacts take in the right data
 //fix contacts tabel so that you can acually add things
 
-
-
-
-
-
 package customerAddressBook;
 
 import java.awt.event.ActionEvent;

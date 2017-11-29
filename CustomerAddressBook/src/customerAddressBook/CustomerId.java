@@ -631,10 +631,10 @@ public class CustomerId {
 	}
 	
 	private void refresh(){
-		row = new Object[12];
+		row = new Object[13];
 		model.setRowCount(0);
 		
-		String sql = "SELECT CustomerId, FirstName, LastName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM ContactTable";
+		String sql = "SELECT ContactId, FirstName, LastName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM ContactTable";
 		
 		try{
 			Connection conn = connect();
@@ -642,18 +642,19 @@ public class CustomerId {
 			ResultSet rs = stat.executeQuery(sql);
 			
 			while(rs.next()){
-				row[0] = rs.getInt("CustomerId");
-				row[1] = rs.getString("CustomerName");
-				row[2] = rs.getString("AddressLine1");
-				row[3] = rs.getString("AddressLine2");
-				row[4] = rs.getString("AddressLine3");
-				row[5] = rs.getString("City");
-				row[6] = rs.getString("Province");
-				row[7] = rs.getString("Country");
-				row[8] = rs.getString("PostalCode");
-				row[9] = rs.getString("PhoneNumber");
-				row[10] = rs.getString("FaxNumber");
-				row[11] = rs.getString("EmailAddress");
+				row[0] = rs.getInt("ContactId");
+				row[1] = rs.getString("FirstName");
+				row[2] = rs.getString("LastName");
+				row[3] = rs.getString("AddressLine1");
+				row[4] = rs.getString("AddressLine2");
+				row[5] = rs.getString("AddressLine3");
+				row[6] = rs.getString("City");
+				row[7] = rs.getString("Province");
+				row[8] = rs.getString("Country");
+				row[9] = rs.getString("PostalCode");
+				row[10] = rs.getString("PhoneNumber");
+				row[11] = rs.getString("FaxNumber");
+				row[12] = rs.getString("EmailAddress");
 				
 				model.addRow(row);
 			}

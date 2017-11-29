@@ -54,6 +54,8 @@ public class SearchEngine extends JFrame {
 		pane.setBounds(8, 8, 1440, 400);
 		
 		add(pane);
+		
+		refresh(id);
 	}
 	
 	private Connection connect(){
@@ -71,7 +73,7 @@ public class SearchEngine extends JFrame {
 		return conn;
 	}
 	
-	private void refresh(int id){
+	private void refresh(String id){
 		row = new Object[12];
 		model.setRowCount(0);
 		

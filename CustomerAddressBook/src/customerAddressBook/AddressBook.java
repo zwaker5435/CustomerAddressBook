@@ -1,13 +1,11 @@
 //fix error messages 
 //put an error message to the right of the search field
 //center labels
-<<<<<<< HEAD
 //resize contact table
 //make contacts take in the right data
-//add an if statment to the search box so that you cant add nothing
-=======
+//add an if statement to the search box so that you cant add nothing
 //red text on errors
->>>>>>> branch 'master' of https://github.com/zwaker5435/CustomerAddressBook.git
+
 
 package customerAddressBook;
 
@@ -127,7 +125,6 @@ public class AddressBook {
 		
 		IdSearch.setText("Id:");
 		
-<<<<<<< HEAD
 		//textboxes
 		textCustomerId.setBounds(20, 455, 100, 25);
 		textCustomerName.setBounds(140, 455, 100, 25);
@@ -141,7 +138,7 @@ public class AddressBook {
 		textPhoneNumber.setBounds(1100, 455, 100, 25);
 		textFaxNumber.setBounds(1220, 455, 100, 25);
 		textEmailAddress.setBounds(1340, 455, 100, 25);
-=======
+
 		//text boxes
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);
@@ -155,7 +152,6 @@ public class AddressBook {
 		textPhoneNumber.setBounds(1100, 805, 100, 25);
 		textFaxNumber.setBounds(1220, 805, 100, 25);
 		textEmailAddress.setBounds(1340, 805, 100, 25);
->>>>>>> branch 'master' of https://github.com/zwaker5435/CustomerAddressBook.git
 		
 		//error labels
 		CustomerIdError.setBounds(20, 500, 100, 25);

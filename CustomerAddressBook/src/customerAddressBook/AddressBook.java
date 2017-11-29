@@ -1,9 +1,13 @@
 //fix error messages 
 //put an error message to the right of the search field
 //center labels
+<<<<<<< HEAD
 //resize contact table
 //make contacts take in the right data
 //add an if statment to the search box so that you cant add nothing
+=======
+//red text on errors
+>>>>>>> branch 'master' of https://github.com/zwaker5435/CustomerAddressBook.git
 
 package customerAddressBook;
 
@@ -30,7 +34,6 @@ public class AddressBook {
 	static Object[] row;
 	static DefaultTableModel model;
 
-	
 	public AddressBook(){
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
@@ -124,6 +127,7 @@ public class AddressBook {
 		
 		IdSearch.setText("Id:");
 		
+<<<<<<< HEAD
 		//textboxes
 		textCustomerId.setBounds(20, 455, 100, 25);
 		textCustomerName.setBounds(140, 455, 100, 25);
@@ -137,6 +141,21 @@ public class AddressBook {
 		textPhoneNumber.setBounds(1100, 455, 100, 25);
 		textFaxNumber.setBounds(1220, 455, 100, 25);
 		textEmailAddress.setBounds(1340, 455, 100, 25);
+=======
+		//text boxes
+		textCustomerId.setBounds(20, 805, 100, 25);
+		textCustomerName.setBounds(140, 805, 100, 25);
+		textAddressLine1.setBounds(260, 805, 100, 25);
+		textAddressLine2.setBounds(380, 805, 100, 25);
+		textAddressLine3.setBounds(500, 805, 100, 25);
+		textCity.setBounds(620, 805, 100, 25);
+		textProvince.setBounds(740, 805, 100, 25);
+		textCountry.setBounds(860, 805, 100, 25);
+		textPostalCode.setBounds(980, 805, 100, 25);
+		textPhoneNumber.setBounds(1100, 805, 100, 25);
+		textFaxNumber.setBounds(1220, 805, 100, 25);
+		textEmailAddress.setBounds(1340, 805, 100, 25);
+>>>>>>> branch 'master' of https://github.com/zwaker5435/CustomerAddressBook.git
 		
 		//error labels
 		CustomerIdError.setBounds(20, 500, 100, 25);
@@ -296,70 +315,70 @@ public class AddressBook {
 				if(name.length()<=30){
 					error[0]=true;
 				}else{
-					CustomerNameError.setText("There is problem.");
+					CustomerNameError.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[0]=false;
 				}
 				
 				if(address1.length()<=30){
 					error[1]=true;
 				}else{
-					AddressLine1Error.setText("There is problem.");
+					AddressLine1Error.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[1]=false;
 				}
 
 				if(address2.length()<=30){
 					error[2]=true;
 				}else{
-					AddressLine2Error.setText("There is problem.");
+					AddressLine2Error.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[2]=false;
 				}
 
 				if(address3.length()<=30){
 					error[3]=true;
 				}else{
-					AddressLine3Error.setText("There is problem.");
+					AddressLine3Error.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[3]=false;
 				}
 
 				if(city.length()<=30){
 					error[4]=true;
 				}else{
-					CityError.setText("There is problem.");
+					CityError.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[4]=false;
 				}
 
 				if(province.length()<=20){
 					error[5]=true;
 				}else{
-					ProvinceError.setText("There is problem.");
+					ProvinceError.setText("<html><font color='red'>Must be less than 21 characters</font></html>");
 					error[5]=false;
 				}
 				
 				if(country.length()<=36){
 					error[6]=true;
 				}else{
-					CountryError.setText("There is problem.");
+					CountryError.setText("<html><font color='red'>Must be less than 37 characters</font></html>");
 					error[6]=false;
 				}
 
 				if(postalcode.length()<=6){
 					error[7]=true;
 				}else{
-					PostalCodeError.setText("6 numbers only");
+					PostalCodeError.setText("<html><font color='red'>6 digits only</font></html>");
 					error[7]=false;
 				}
 				
 				if(phone.length()==10){
 					error[8]=true;
 				}else{
-					PhoneNumberError.setText("10 numbers only");
+					PhoneNumberError.setText("<html><font color='red'>10 digits only</font></html>");
 					error[8]=false;
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
 					error[9]=true;
 				}else{
-					FaxNumberError.setText("10 or 11 numbers");
+					FaxNumberError.setText("<html><font color='red'>10 or 11 digits</font></html>");
 					error[9]=false;
 				}
 				
@@ -367,7 +386,7 @@ public class AddressBook {
 					error[10]=true;
 				}else{
 					error[10]=false;
-					EmailAddressError.setText("You need a @");
+					EmailAddressError.setText("<html><font color='red'>You need @</font></html>");
 				}
 				
 				//Checks if any are false

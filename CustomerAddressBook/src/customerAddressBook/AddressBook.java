@@ -183,6 +183,7 @@ public class AddressBook {
 		
 		frame.add(pane);
 		
+		
 		frame.add(textCustomerId);
 		frame.add(textCustomerName);
 		frame.add(textAddressLine1);

@@ -140,19 +140,19 @@ public class AddressBook {
 		textEmailAddress.setBounds(1340, 455, 100, 25);
 
 		//text boxes
-		textCustomerId.setBounds(20, 805, 100, 25);
-		textCustomerName.setBounds(140, 805, 100, 25);
-		textAddressLine1.setBounds(260, 805, 100, 25);
-		textAddressLine2.setBounds(380, 805, 100, 25);
-		textAddressLine3.setBounds(500, 805, 100, 25);
-		textCity.setBounds(620, 805, 100, 25);
-		textProvince.setBounds(740, 805, 100, 25);
-		textCountry.setBounds(860, 805, 100, 25);
-		textPostalCode.setBounds(980, 805, 100, 25);
-		textPhoneNumber.setBounds(1100, 805, 100, 25);
-		textFaxNumber.setBounds(1220, 805, 100, 25);
-		textEmailAddress.setBounds(1340, 805, 100, 25);
-		
+		textCustomerId.setBounds(20, 455, 100, 25);
+		textCustomerName.setBounds(140, 455, 100, 25);
+		textAddressLine1.setBounds(260, 455, 100, 25);
+		textAddressLine2.setBounds(380, 455, 100, 25);
+		textAddressLine3.setBounds(500, 455, 100, 25);
+		textCity.setBounds(620, 455, 100, 25);
+		textProvince.setBounds(740, 455, 100, 25);
+		textCountry.setBounds(860, 455, 100, 25);
+		textPostalCode.setBounds(980, 455, 100, 25);
+		textPhoneNumber.setBounds(1100, 455, 100, 25);
+		textFaxNumber.setBounds(1220, 455, 100, 25);
+		textEmailAddress.setBounds(1340, 455, 100, 25);
+
 		//error labels
 		CustomerIdError.setBounds(20, 500, 100, 25);
 		CustomerNameError.setBounds(140, 500, 100, 25);

@@ -34,14 +34,13 @@ public class AddressBook {
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
 	
-		//creates a table model and sets column headings
 		Object[] columns = {"CustomerId", "CustomerName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
 		model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
 		table.setModel(model);
 		
-		//set column titles
+		//set column titles size
 		table.getColumnModel().getColumn(0).setMinWidth(120);
 		table.getColumnModel().getColumn(1).setMinWidth(120);
 		table.getColumnModel().getColumn(2).setMinWidth(120);
@@ -55,7 +54,6 @@ public class AddressBook {
 		table.getColumnModel().getColumn(10).setMinWidth(120);
 		table.getColumnModel().getColumn(11).setMinWidth(120);
 		
-		//text fields
 		JTextField textCustomerId = new JTextField();
 		JTextField textCustomerName = new JTextField();
 		JTextField textAddressLine1 = new JTextField();
@@ -69,11 +67,9 @@ public class AddressBook {
 		JTextField textFaxNumber = new JTextField();
 		JTextField textEmailAddress = new JTextField();
 		
-		//search fields
 		JTextField textIdSearch = new JTextField();
 		JLabel IdSearch = new JLabel();
 		
-		//text field labels
 		JLabel CustomerId = new JLabel();
 		JLabel CustomerName = new JLabel();
 		JLabel AddressLine1 = new JLabel();
@@ -87,7 +83,6 @@ public class AddressBook {
 		JLabel FaxNumber = new JLabel();
 		JLabel EmailAddress = new JLabel();
 		
-		// Error JLabels
 		JLabel CustomerIdError = new JLabel();
 		JLabel CustomerNameError = new JLabel();
 		JLabel AddressLine1Error = new JLabel();
@@ -101,21 +96,18 @@ public class AddressBook {
 		JLabel FaxNumberError = new JLabel();
 		JLabel EmailAddressError = new JLabel();
 		
-		//buttons
 		JButton btnAdd = new JButton();
 		JButton btnDelete = new JButton();
 		JButton btnEdit = new JButton();
 		JButton btnSearch = new JButton();
 		JButton btnContacts = new JButton();
 		
-		//name buttons
 		btnAdd.setText("Add");
 		btnDelete.setText("Delete");
 		btnEdit.setText("Edit");
 		btnSearch.setText("Search");
 		btnContacts.setText("Contacts");
 		
-		//name text field labels
 		CustomerId.setText("CustomerId");
 		CustomerName.setText("CustomerName");
 		AddressLine1.setText("AddressLine1");
@@ -129,10 +121,8 @@ public class AddressBook {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
-		//name IdSearch
 		IdSearch.setText("Id:");
 		
-		//set text fields
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);
 		textAddressLine1.setBounds(260, 805, 100, 25);
@@ -146,7 +136,6 @@ public class AddressBook {
 		textFaxNumber.setBounds(1220, 805, 100, 25);
 		textEmailAddress.setBounds(1340, 805, 100, 25);
 		
-		//set text field errors
 		CustomerIdError.setBounds(20, 850, 100, 25);
 		CustomerNameError.setBounds(140, 850, 100, 25);
 		AddressLine1Error.setBounds(260, 850, 100, 25);
@@ -160,11 +149,9 @@ public class AddressBook {
 		FaxNumberError.setBounds(1220, 850, 100, 25);
 		EmailAddressError.setBounds(1340, 850, 100, 25);
 		
-		//set search fields
 		textIdSearch.setBounds(660, 885, 75, 25);
 		IdSearch.setBounds(630, 885, 20, 25);
 		
-		//set text field labels
 		CustomerId.setBounds(20, 755, 100, 25);
 		CustomerName.setBounds(140, 755, 100, 25);
 		AddressLine1.setBounds(260, 755, 100, 25);
@@ -178,7 +165,6 @@ public class AddressBook {
 		FaxNumber.setBounds(1220, 755, 100, 25);
 		EmailAddress.setBounds(1340, 755, 100, 25);
 		
-		//set buttons
 		btnAdd.setBounds(20, 885, 75, 25);
 		btnDelete.setBounds(140, 885, 75, 25);
 		btnEdit.setBounds(260, 885, 75, 25);

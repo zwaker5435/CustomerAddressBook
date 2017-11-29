@@ -27,14 +27,13 @@ public class CustomerId {
 		JFrame frame = new JFrame();
 		JTable table = new JTable();
 	
-		//creates a table model and sets column headings
 		Object[] columns = {"ContactId", "FirstName", "LastName", "AddressLine1", "AddressLine2", "AddressLine3", "City", "Province", "Country", "PostalCode", "PhoneNumber", "FaxNumber", "EmailAddress"};
 		model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		
 		table.setModel(model);
 		
-		//set column titles
+		//set column titles size
 		table.getColumnModel().getColumn(0).setMinWidth(120);
 		table.getColumnModel().getColumn(1).setMinWidth(120);
 		table.getColumnModel().getColumn(2).setMinWidth(120);
@@ -49,7 +48,6 @@ public class CustomerId {
 		table.getColumnModel().getColumn(11).setMinWidth(120);
 		table.getColumnModel().getColumn(12).setMinWidth(120);
 		
-		//text fields
 		JTextField textContactId = new JTextField();
 		JTextField textFirstName = new JTextField();
 		JTextField textLastName = new JTextField();
@@ -64,7 +62,6 @@ public class CustomerId {
 		JTextField textFaxNumber = new JTextField();
 		JTextField textEmailAddress = new JTextField();
 
-		//text field labels
 		JLabel ContactId = new JLabel();
 		JLabel FirstName = new JLabel();
 		JLabel LastName = new JLabel();
@@ -79,7 +76,6 @@ public class CustomerId {
 		JLabel FaxNumber = new JLabel();
 		JLabel EmailAddress = new JLabel();
 		
-		// Error JLabels
 		JLabel ContactIdError = new JLabel();
 		JLabel FirstNameError = new JLabel();
 		JLabel LastNameError = new JLabel();
@@ -94,17 +90,14 @@ public class CustomerId {
 		JLabel FaxNumberError = new JLabel();
 		JLabel EmailAddressError = new JLabel();
 		
-		//buttons
 		JButton btnAdd = new JButton();
 		JButton btnDelete = new JButton();
 		JButton btnEdit = new JButton();
 		
-		//name buttons
 		btnAdd.setText("Add");
 		btnDelete.setText("Delete");
 		btnEdit.setText("Edit");
 		
-		//name text field labels
 		ContactId.setText("CustomerId");
 		FirstName.setText("FirstName");
 		LastName.setText("LastName");
@@ -119,7 +112,6 @@ public class CustomerId {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
-		//set text fields
 		textContactId.setBounds(20, 805, 100, 25);
 		textFirstName.setBounds(140, 805, 100, 25);
 		textLastName.setBounds(260, 805, 100, 25);
@@ -134,7 +126,6 @@ public class CustomerId {
 		textFaxNumber.setBounds(1340, 805, 100, 25);
 		textEmailAddress.setBounds(1460, 805, 100, 25);
 		
-		//set text field errors
 		ContactIdError.setBounds(20, 850, 100, 25);
 		FirstNameError.setBounds(140, 850, 100, 25);
 		LastNameError.setBounds(260, 850, 100, 25);
@@ -149,7 +140,6 @@ public class CustomerId {
 		FaxNumberError.setBounds(1340, 850, 100, 25);
 		EmailAddressError.setBounds(1460, 850, 100, 25);
 		
-		//set text field labels
 		ContactId.setBounds(20, 755, 100, 25);
 		FirstName.setBounds(140, 755, 100, 25);
 		LastName.setBounds(260, 755, 100, 25);
@@ -164,7 +154,6 @@ public class CustomerId {
 		FaxNumber.setBounds(1340, 755, 100, 25);
 		EmailAddress.setBounds(1460, 755, 100, 25);
 		
-		//set buttons
 		btnAdd.setBounds(20, 895, 75, 25);
 		btnDelete.setBounds(140, 895, 75, 25);
 		btnEdit.setBounds(260, 895, 75, 25);
@@ -422,7 +411,7 @@ public class CustomerId {
 		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "DELETE FROM CustomerAddressBook WHERE CustomerId = ?";
+				String sql = "DELETE FROM ContactTable WHERE CustomerId = ?";
 				
 				try {
 					Connection conn = connect();
@@ -444,7 +433,7 @@ public class CustomerId {
 			
 		});
 		
-		btnEdit.addActionListener(new ActionListener() {
+		btnEdit.addActionListener(new ActionListener() {//13 ? 12 things to fill them
 			public void actionPerformed(ActionEvent e) {
 				String sql = "UPDATE ContactTable SET FirstName = ?, LastName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
 				

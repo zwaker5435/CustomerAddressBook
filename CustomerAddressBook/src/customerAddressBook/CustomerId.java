@@ -160,7 +160,7 @@ public class CustomerId {
 		btnEdit.setBounds(260, 895, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
-		pane.setBounds(8, 8, 1440, 400);
+		pane.setBounds(8, 8, 1600, 400);
 		
 		frame.setLayout(null);
 		

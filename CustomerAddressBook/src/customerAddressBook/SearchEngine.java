@@ -21,7 +21,7 @@ public class SearchEngine extends JFrame {
 	static Object[] row;
 
 	public SearchEngine(String id) {
-		setSize(1473, 463);
+		setSize(1473, 100);
 		setLocationRelativeTo(null);
 		setVisible(true);
 		contentPane = new JPanel();

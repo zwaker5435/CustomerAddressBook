@@ -123,6 +123,7 @@ public class AddressBook {
 		
 		IdSearch.setText("Id:");
 		
+		//textboxes
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);
 		textAddressLine1.setBounds(260, 805, 100, 25);
@@ -136,6 +137,7 @@ public class AddressBook {
 		textFaxNumber.setBounds(1220, 805, 100, 25);
 		textEmailAddress.setBounds(1340, 805, 100, 25);
 		
+		//error labels
 		CustomerIdError.setBounds(20, 850, 100, 25);
 		CustomerNameError.setBounds(140, 850, 100, 25);
 		AddressLine1Error.setBounds(260, 850, 100, 25);
@@ -149,9 +151,11 @@ public class AddressBook {
 		FaxNumberError.setBounds(1220, 850, 100, 25);
 		EmailAddressError.setBounds(1340, 850, 100, 25);
 		
+		//search engine textbox and label
 		textIdSearch.setBounds(660, 885, 75, 25);
 		IdSearch.setBounds(630, 885, 20, 25);
 		
+		//textbox labels
 		CustomerId.setBounds(20, 755, 100, 25);
 		CustomerName.setBounds(140, 755, 100, 25);
 		AddressLine1.setBounds(260, 755, 100, 25);
@@ -165,6 +169,7 @@ public class AddressBook {
 		FaxNumber.setBounds(1220, 755, 100, 25);
 		EmailAddress.setBounds(1340, 755, 100, 25);
 		
+		//buttons
 		btnAdd.setBounds(20, 885, 75, 25);
 		btnDelete.setBounds(140, 885, 75, 25);
 		btnEdit.setBounds(260, 885, 75, 25);

@@ -1,8 +1,7 @@
 //fix error messages 
 //put an error message to the right of the search field
 //center labels
-//make contacts take in the right data
-//fix contacts tabel so that you can acually add things
+//red text on errors
 
 package customerAddressBook;
 
@@ -123,7 +122,7 @@ public class AddressBook {
 		
 		IdSearch.setText("Id:");
 		
-		//textboxes
+		//text boxes
 		textCustomerId.setBounds(20, 805, 100, 25);
 		textCustomerName.setBounds(140, 805, 100, 25);
 		textAddressLine1.setBounds(260, 805, 100, 25);

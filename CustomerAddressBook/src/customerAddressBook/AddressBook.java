@@ -18,7 +18,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.InputMismatchException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -640,12 +639,7 @@ public class AddressBook {
 					System.out.println(result);
 					
 					if(result<=size && result>=0){
-					
 						SearchEngine search = new SearchEngine(textIdSearch.getText());
-						
-						
-					}else{
-						IdSearcherror.setText("that is not a number");
 					}
 					
 					rs.close();

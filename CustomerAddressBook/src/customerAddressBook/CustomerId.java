@@ -422,7 +422,7 @@ public class CustomerId {
 		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "DELETE FROM ContactTable WHERE CustomerId = ?";
+				String sql = "DELETE FROM ContactTable WHERE ContactId = ?";
 				
 				try {
 					Connection conn = connect();
@@ -446,7 +446,7 @@ public class CustomerId {
 		
 		btnEdit.addActionListener(new ActionListener() {//13 ? 12 things to fill them
 			public void actionPerformed(ActionEvent e) {
-				String sql = "UPDATE ContactTable SET FirstName = ?, LastName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE CustomerId = ?";
+				String sql = "UPDATE ContactTable SET FirstName = ?, LastName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE ContactId = ?";
 				
 				ContactIdError.setText("");
 				FirstNameError.setText("");
@@ -644,7 +644,7 @@ public class CustomerId {
 		row = new Object[12];
 		model.setRowCount(0);
 		
-		String sql = "SELECT CustomerId, CustomerName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM ContactTable";
+		String sql = "SELECT CustomerId, FirstName, LastName, AddressLine1, AddressLine2, AddressLine3, City, Province, Country, PostalCode, PhoneNumber, FaxNumber, EmailAddress FROM ContactTable";
 		
 		try{
 			Connection conn = connect();

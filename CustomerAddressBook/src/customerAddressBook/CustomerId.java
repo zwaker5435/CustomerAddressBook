@@ -47,7 +47,7 @@ public class CustomerId {
 		table.getColumnModel().getColumn(9).setMinWidth(120);
 		table.getColumnModel().getColumn(10).setMinWidth(120);
 		table.getColumnModel().getColumn(11).setMinWidth(120);
-		table.getColumnModel().getColumn(12).setMinWidth(120);
+		table.getColumnModel().getColumn(12).setMinWidth(140);
 		
 		JTextField textContactId = new JTextField();
 		JTextField textFirstName = new JTextField();
@@ -77,7 +77,6 @@ public class CustomerId {
 		JLabel FaxNumber = new JLabel();
 		JLabel EmailAddress = new JLabel();
 		
-		JLabel ContactIdError = new JLabel();
 		JLabel FirstNameError = new JLabel();
 		JLabel LastNameError = new JLabel();
 		JLabel AddressLine1Error = new JLabel();
@@ -113,54 +112,53 @@ public class CustomerId {
 		FaxNumber.setText("FaxNumber");
 		EmailAddress.setText("EmailAddress");
 		
-		textContactId.setBounds(20, 805, 100, 25);
-		textFirstName.setBounds(140, 805, 100, 25);
-		textLastName.setBounds(260, 805, 100, 25);
-		textAddressLine1.setBounds(380, 805, 100, 25);
-		textAddressLine2.setBounds(500, 805, 100, 25);
-		textAddressLine3.setBounds(620, 805, 100, 25);
-		textCity.setBounds(740, 805, 100, 25);
-		textProvince.setBounds(860, 805, 100, 25);
-		textCountry.setBounds(980, 805, 100, 25);
-		textPostalCode.setBounds(1100, 805, 100, 25);
-		textPhoneNumber.setBounds(1220, 805, 100, 25);
-		textFaxNumber.setBounds(1340, 805, 100, 25);
-		textEmailAddress.setBounds(1460, 805, 100, 25);
+		textContactId.setBounds(20, 435, 100, 25);
+		textFirstName.setBounds(140, 435, 100, 25);
+		textLastName.setBounds(260, 435, 100, 25);
+		textAddressLine1.setBounds(380, 435, 100, 25);
+		textAddressLine2.setBounds(500, 435, 100, 25);
+		textAddressLine3.setBounds(620, 435, 100, 25);
+		textCity.setBounds(740, 435, 100, 25);
+		textProvince.setBounds(860, 435, 100, 25);
+		textCountry.setBounds(980, 435, 100, 25);
+		textPostalCode.setBounds(1100, 435, 100, 25);
+		textPhoneNumber.setBounds(1220, 435, 100, 25);
+		textFaxNumber.setBounds(1340, 435, 100, 25);
+		textEmailAddress.setBounds(1460, 435, 100, 25);
 		
-		ContactIdError.setBounds(20, 850, 100, 25);
-		FirstNameError.setBounds(140, 850, 100, 25);
-		LastNameError.setBounds(260, 850, 100, 25);
-		AddressLine1Error.setBounds(380, 850, 100, 25);
-		AddressLine2Error.setBounds(500, 850, 100, 25);
-		AddressLine3Error.setBounds(620, 850, 100, 25);
-		CityError.setBounds(740, 850, 100, 25);
-		ProvinceError.setBounds(860, 850, 100, 25);
-		CountryError.setBounds(980, 850, 100, 25);
-		PostalCodeError.setBounds(1100, 850, 100, 25);
-		PhoneNumberError.setBounds(1220, 850, 100, 25);
-		FaxNumberError.setBounds(1340, 850, 100, 25);
-		EmailAddressError.setBounds(1460, 850, 100, 25);
+		FirstNameError.setBounds(140, 460, 100, 50);
+		LastNameError.setBounds(260, 460, 100, 50);
+		AddressLine1Error.setBounds(380, 460, 100, 50);
+		AddressLine2Error.setBounds(500, 460, 100, 50);
+		AddressLine3Error.setBounds(620, 460, 100, 50);
+		CityError.setBounds(740, 460, 100, 50);
+		ProvinceError.setBounds(860, 460, 100, 25);
+		CountryError.setBounds(980, 460, 100, 25);
+		PostalCodeError.setBounds(1100, 460, 100, 25);
+		PhoneNumberError.setBounds(1220, 460, 100, 25);
+		FaxNumberError.setBounds(1340, 460, 100, 25);
+		EmailAddressError.setBounds(1460, 460, 100, 25);
 		
-		ContactId.setBounds(20, 755, 100, 25);
-		FirstName.setBounds(140, 755, 100, 25);
-		LastName.setBounds(260, 755, 100, 25);
-		AddressLine1.setBounds(380, 755, 100, 25);
-		AddressLine2.setBounds(500, 755, 100, 25);
-		AddressLine3.setBounds(620, 755, 100, 25);
-		City.setBounds(740, 755, 100, 25);
-		Province.setBounds(860, 755, 100, 25);
-		Country.setBounds(980, 755, 100, 25);
-		PostalCode.setBounds(1100, 755, 100, 25);
-		PhoneNumber.setBounds(1220, 755, 100, 25);
-		FaxNumber.setBounds(1340, 755, 100, 25);
-		EmailAddress.setBounds(1460, 755, 100, 25);
+		ContactId.setBounds(20, 405, 100, 25);
+		FirstName.setBounds(140, 405, 100, 25);
+		LastName.setBounds(260, 405, 100, 25);
+		AddressLine1.setBounds(380, 405, 100, 25);
+		AddressLine2.setBounds(500, 405, 100, 25);
+		AddressLine3.setBounds(620, 405, 100, 25);
+		City.setBounds(740, 405, 100, 25);
+		Province.setBounds(860, 405, 100, 25);
+		Country.setBounds(980, 405, 100, 25);
+		PostalCode.setBounds(1100, 405, 100, 25);
+		PhoneNumber.setBounds(1220, 405, 100, 25);
+		FaxNumber.setBounds(1340, 405, 100, 25);
+		EmailAddress.setBounds(1460, 405, 100, 25);
 		
-		btnAdd.setBounds(20, 895, 75, 25);
-		btnDelete.setBounds(140, 895, 75, 25);
-		btnEdit.setBounds(260, 895, 75, 25);
+		btnAdd.setBounds(20, 515, 75, 25);
+		btnDelete.setBounds(140, 515, 75, 25);
+		btnEdit.setBounds(260, 515, 75, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
-		pane.setBounds(8, 8, 1600, 400);
+		pane.setBounds(8, 8, 1580, 400);
 		
 		frame.setLayout(null);
 		
@@ -194,7 +192,6 @@ public class CustomerId {
 		frame.add(FaxNumber);
 		frame.add(EmailAddress);
 		
-		frame.add(ContactIdError);
 		frame.add(FirstNameError);
 		frame.add(LastNameError);
 		frame.add(AddressLine1Error);
@@ -241,7 +238,6 @@ public class CustomerId {
 				String firstName, lastName, address1, address2, address3, city, province, country, postalcode, phone, fax, email;
 				boolean[] error = new boolean[13];
 				
-				ContactIdError.setText("");
 				FirstNameError.setText("");
 				LastNameError.setText("");
 				AddressLine1Error.setText("");
@@ -275,7 +271,7 @@ public class CustomerId {
 				if(firstName.length()<=30){
 					error[0]=true;
 				}else{
-					FirstNameError.setText("<html><font color='red'>must be less than 31 characters</font></html>");
+					FirstNameError.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[0]=false;
 				}
 				
@@ -353,7 +349,7 @@ public class CustomerId {
 					error[10]=true;
 				}else{
 					error[10]=false;
-					EmailAddressError.setText("<html><font color='red'>You need @</font></html>");
+					EmailAddressError.setText("<html><font color='red'>You need an @</font></html>");
 				}
 				
 				//Checks if any are false
@@ -386,7 +382,6 @@ public class CustomerId {
 						pst.close();
 						conn.close();
 						
-						ContactIdError.setText("");
 						FirstNameError.setText("");
 						LastNameError.setText("");
 						AddressLine1Error.setText("");
@@ -438,7 +433,6 @@ public class CustomerId {
 			public void actionPerformed(ActionEvent e) {
 				String sql = "UPDATE ContactTable SET FirstName = ?, LastName = ?, AddressLine1 = ?, AddressLine2 = ?, AddressLine3 = ?, City = ?, Province = ?, Country = ?, PostalCode = ?, PhoneNumber = ?, FaxNumber = ?, EmailAddress = ? WHERE ContactId = ?";
 				
-				ContactIdError.setText("");
 				FirstNameError.setText("");
 				LastNameError.setText("");
 				AddressLine1Error.setText("");
@@ -475,77 +469,77 @@ public class CustomerId {
 				if(firstName.length()<=30){
 					error[0]=true;
 				}else{
-					FirstNameError.setText("There is problem.");
+					FirstNameError.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[0]=false;
 				}
 				
 				if(lastName.length()<=30){
 					error[1]=true;
 				}else{
-					LastNameError.setText("There is problem.");
+					LastNameError.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[1]=false;
 				}
 				
 				if(address1.length()<=30){
 					error[2]=true;
 				}else{
-					AddressLine1Error.setText("There is problem.");
+					AddressLine1Error.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[2]=false;
 				}
 
 				if(address2.length()<=30){
 					error[3]=true;
 				}else{
-					AddressLine2Error.setText("There is problem.");
+					AddressLine2Error.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[3]=false;
 				}
 
 				if(address3.length()<=30){
 					error[4]=true;
 				}else{
-					AddressLine3Error.setText("There is problem.");
+					AddressLine3Error.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[4]=false;
 				}
 
 				if(city.length()<=30){
 					error[5]=true;
 				}else{
-					CityError.setText("There is problem.");
+					CityError.setText("<html><font color='red'>Must be less than 31 characters</font></html>");
 					error[5]=false;
 				}
 
 				if(province.length()<=20){
 					error[6]=true;
 				}else{
-					ProvinceError.setText("There is problem.");
+					ProvinceError.setText("<html><font color='red'>Must be less than 21 characters</font></html>");
 					error[6]=false;
 				}
 				
 				if(country.length()<=36){
 					error[7]=true;
 				}else{
-					CountryError.setText("There is problem.");
+					CountryError.setText("<html><font color='red'>Must be less than 36 characters</font></html>");
 					error[7]=false;
 				}
 
 				if(postalcode.length()<=6){
 					error[8]=true;
 				}else{
-					PostalCodeError.setText("6 numbers only");
+					PostalCodeError.setText("<html><font color='red'>6 digits only</font></html>");
 					error[8]=false;
 				}
 				
 				if(phone.length()==10){
 					error[9]=true;
 				}else{
-					PhoneNumberError.setText("10 numbers only");
+					PhoneNumberError.setText("<html><font color='red'>10 digits only</font></html>");
 					error[9]=false;
 				}
 				
 				if(fax.length()==10 || fax.length()==11){
 					error[10]=true;
 				}else{
-					FaxNumberError.setText("10 or 11 numbers only");
+					FaxNumberError.setText("<html><font color='red'>10 or 11 digits</font></html>");
 					error[10]=false;
 				}
 				
@@ -553,7 +547,7 @@ public class CustomerId {
 					error[11]=true;
 				}else{
 					error[11]=false;
-					EmailAddressError.setText("You need a @");
+					EmailAddressError.setText("<html><font color='red'>You need an @</font></html>");
 				}
 				
 				//Checks if any are false
@@ -609,7 +603,7 @@ public class CustomerId {
 			
 		});
 		
-		frame.setSize(2000, 1000);
+		frame.setSize(1612, 600);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		

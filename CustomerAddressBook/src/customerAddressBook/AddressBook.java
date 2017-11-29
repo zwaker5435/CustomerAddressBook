@@ -634,7 +634,7 @@ public class AddressBook {
 			}
 		});
 		
-		frame.setSize(2000, 1000);
+		frame.setSize(1475, 1000);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);

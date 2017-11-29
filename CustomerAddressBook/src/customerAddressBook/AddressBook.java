@@ -28,7 +28,6 @@ public class AddressBook {
 	static Object[] row;
 	static DefaultTableModel model;
 
-	
 	public AddressBook(){
 		JFrame frame = new JFrame();
 		JTable table = new JTable();

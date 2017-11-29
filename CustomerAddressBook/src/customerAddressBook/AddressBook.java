@@ -1,8 +1,9 @@
 //fix error messages 
 //put an error message to the right of the search field
 //center labels
+//resize contact table
 //make contacts take in the right data
-//fix contacts tabel so that you can acually add things
+//add an if statment to the search box so that you cant add nothing
 
 package customerAddressBook;
 
@@ -124,57 +125,57 @@ public class AddressBook {
 		IdSearch.setText("Id:");
 		
 		//textboxes
-		textCustomerId.setBounds(20, 805, 100, 25);
-		textCustomerName.setBounds(140, 805, 100, 25);
-		textAddressLine1.setBounds(260, 805, 100, 25);
-		textAddressLine2.setBounds(380, 805, 100, 25);
-		textAddressLine3.setBounds(500, 805, 100, 25);
-		textCity.setBounds(620, 805, 100, 25);
-		textProvince.setBounds(740, 805, 100, 25);
-		textCountry.setBounds(860, 805, 100, 25);
-		textPostalCode.setBounds(980, 805, 100, 25);
-		textPhoneNumber.setBounds(1100, 805, 100, 25);
-		textFaxNumber.setBounds(1220, 805, 100, 25);
-		textEmailAddress.setBounds(1340, 805, 100, 25);
+		textCustomerId.setBounds(20, 455, 100, 25);
+		textCustomerName.setBounds(140, 455, 100, 25);
+		textAddressLine1.setBounds(260, 455, 100, 25);
+		textAddressLine2.setBounds(380, 455, 100, 25);
+		textAddressLine3.setBounds(500, 455, 100, 25);
+		textCity.setBounds(620, 455, 100, 25);
+		textProvince.setBounds(740, 455, 100, 25);
+		textCountry.setBounds(860, 455, 100, 25);
+		textPostalCode.setBounds(980, 455, 100, 25);
+		textPhoneNumber.setBounds(1100, 455, 100, 25);
+		textFaxNumber.setBounds(1220, 455, 100, 25);
+		textEmailAddress.setBounds(1340, 455, 100, 25);
 		
 		//error labels
-		CustomerIdError.setBounds(20, 850, 100, 25);
-		CustomerNameError.setBounds(140, 850, 100, 25);
-		AddressLine1Error.setBounds(260, 850, 100, 25);
-		AddressLine2Error.setBounds(380, 850, 100, 25);
-		AddressLine3Error.setBounds(500, 850, 100, 25);
-		CityError.setBounds(620, 850, 100, 25);
-		ProvinceError.setBounds(740, 850, 100, 25);
-		CountryError.setBounds(860, 850, 100, 25);
-		PostalCodeError.setBounds(980, 850, 100, 25);
-		PhoneNumberError.setBounds(1100, 850, 100, 25);
-		FaxNumberError.setBounds(1220, 850, 100, 25);
-		EmailAddressError.setBounds(1340, 850, 100, 25);
+		CustomerIdError.setBounds(20, 500, 100, 25);
+		CustomerNameError.setBounds(140, 500, 100, 25);
+		AddressLine1Error.setBounds(260, 500, 100, 25);
+		AddressLine2Error.setBounds(380, 500, 100, 25);
+		AddressLine3Error.setBounds(500, 500, 100, 25);
+		CityError.setBounds(620, 500, 100, 25);
+		ProvinceError.setBounds(740, 500, 100, 25);
+		CountryError.setBounds(860, 500, 100, 25);
+		PostalCodeError.setBounds(980, 500, 100, 25);
+		PhoneNumberError.setBounds(1100, 500, 100, 25);
+		FaxNumberError.setBounds(1220, 500, 100, 25);
+		EmailAddressError.setBounds(1340, 500, 100, 25);
 		
 		//search engine textbox and label
-		textIdSearch.setBounds(660, 885, 75, 25);
-		IdSearch.setBounds(630, 885, 20, 25);
+		textIdSearch.setBounds(660, 535, 75, 25);
+		IdSearch.setBounds(630, 535, 20, 25);
 		
 		//textbox labels
-		CustomerId.setBounds(20, 755, 100, 25);
-		CustomerName.setBounds(140, 755, 100, 25);
-		AddressLine1.setBounds(260, 755, 100, 25);
-		AddressLine2.setBounds(380, 755, 100, 25);
-		AddressLine3.setBounds(500, 755, 100, 25);
-		City.setBounds(620, 755, 100, 25);
-		Province.setBounds(740, 755, 100, 25);
-		Country.setBounds(860, 755, 100, 25);
-		PostalCode.setBounds(980, 755, 100, 25);
-		PhoneNumber.setBounds(1100, 755, 100, 25);
-		FaxNumber.setBounds(1220, 755, 100, 25);
-		EmailAddress.setBounds(1340, 755, 100, 25);
+		CustomerId.setBounds(20, 405, 100, 25);
+		CustomerName.setBounds(140, 405, 100, 25);
+		AddressLine1.setBounds(260, 405, 100, 25);
+		AddressLine2.setBounds(380, 405, 100, 25);
+		AddressLine3.setBounds(500, 405, 100, 25);
+		City.setBounds(620, 405, 100, 25);
+		Province.setBounds(740, 405, 100, 25);
+		Country.setBounds(860, 405, 100, 25);
+		PostalCode.setBounds(980, 405, 100, 25);
+		PhoneNumber.setBounds(1100, 405, 100, 25);
+		FaxNumber.setBounds(1220, 405, 100, 25);
+		EmailAddress.setBounds(1340, 405, 100, 25);
 		
 		//buttons
-		btnAdd.setBounds(20, 885, 75, 25);
-		btnDelete.setBounds(140, 885, 75, 25);
-		btnEdit.setBounds(260, 885, 75, 25);
-		btnSearch.setBounds(510, 885, 75, 25);
-		btnContacts.setBounds(380, 885, 85, 25);
+		btnAdd.setBounds(20, 535, 75, 25);
+		btnDelete.setBounds(140, 535, 75, 25);
+		btnEdit.setBounds(260, 535, 75, 25);
+		btnSearch.setBounds(510, 535, 75, 25);
+		btnContacts.setBounds(380, 535, 85, 25);
 		
 		JScrollPane pane = new JScrollPane(table);
 		pane.setBounds(8, 8, 1440, 400);
@@ -634,7 +635,7 @@ public class AddressBook {
 			}
 		});
 		
-		frame.setSize(1475, 1000);
+		frame.setSize(1475, 620);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);

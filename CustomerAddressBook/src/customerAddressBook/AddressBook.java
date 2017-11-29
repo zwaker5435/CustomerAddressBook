@@ -1,4 +1,3 @@
-//fix error messages 
 //put an error message to the right of the search field
 //center labels
 //resize contact table
